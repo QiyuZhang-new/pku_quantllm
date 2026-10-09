@@ -1,0 +1,69 @@
+{
+  "downloaded_at": "2026-10-09T10:27:08.564808+00:00",
+  "source": "Yahoo Finance chart API",
+  "price_adjustment": "OHLC multiplied by adjclose/close; retrospective total-return adjustment",
+  "rows": 21120,
+  "sha256": "328672b078a31285ea915e13b37a72dd671d51235d96570050114b40f75e589f",
+  "symbols": [
+    {
+      "symbol": "SPY",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "0a24f9c2055f6f382717245a80c6c9c59b23fe3c1b4573efb3cbb7b51782945a"
+    },
+    {
+      "symbol": "QQQ",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "2dbbb7cbdd47880b72a2b256fff00a20ee54ab2257d8fd1779a68b71f1acf78e"
+    },
+    {
+      "symbol": "IWM",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/IWM?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "4fa02a776cd9d38344aa0fbf1d3b40e377b8f4bd157f2d8cc5ba81d0292f4f23"
+    },
+    {
+      "symbol": "DIA",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIA?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "0eca9204d7369f1aaabc76e3997ab5f8d51073454f9b8e41f475e74ca909b277"
+    },
+    {
+      "symbol": "XLF",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLF?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "fbcf14dac67dba3a98565b117d382f87ed91723d17ab1fe442afa3723218b55d"
+    },
+    {
+      "symbol": "XLK",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "3aa384136050194bf848fb9d12d0e18780416b97540824f22d217d3f245d3096"
+    },
+    {
+      "symbol": "XLE",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLE?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "61443b6ada255202b91e7cfa3cd44b6c1a039f37fc67d27ab374fea9037b2a71"
+    },
+    {
+      "symbol": "XLV",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLV?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "c5d92b08769364c7c11a5cadd6f562e31bd5bbd9fc5a935b83c00711e0e94f93"
+    },
+    {
+      "symbol": "XLI",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLI?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "c28dbcb06693023e81527a3e8acf96c01c46b5837339aca6d29c0250077d0e86"
+    },
+    {
+      "symbol": "XLP",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "f2fe77bb563136f889c7a2fd2b056b2765e62b6e09e4b87b73aaa25df50840ca"
+    },
+    {
+      "symbol": "XLY",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "004723a143b0e4382f3cafa25259932384d95297b34699190d08f0183c4abb7a"
+    },
+    {
+      "symbol": "XLU",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1546300800&period2=1767225600&interval=1d",
+      "response_sha256": "d7a3bd7ea51c0479bfe4568a307b6b5a18da338e216d50a151d8f793d1d8f976"
+    }
+  ]
+}

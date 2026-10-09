@@ -1,0 +1,11 @@
+test_features_do_not_use_future (test_homework.HomeworkTests.test_features_do_not_use_future) ... ok
+test_gap_and_next_day_label (test_homework.HomeworkTests.test_gap_and_next_day_label) ... ok
+test_login_failure_does_not_subscribe (test_homework.HomeworkTests.test_login_failure_does_not_subscribe) ... ok
+test_official_event_engine_dispatches (test_homework.HomeworkTests.test_official_event_engine_dispatches) ... ok
+test_reconnect_resubscribes_and_counts_only_valid_ticks (test_homework.HomeworkTests.test_reconnect_resubscribes_and_counts_only_valid_ticks) ... ok
+test_subscription_rejection_is_failure (test_homework.HomeworkTests.test_subscription_rejection_is_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.200s
+
+OK

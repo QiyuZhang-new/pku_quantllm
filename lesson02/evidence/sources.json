@@ -1,0 +1,20 @@
+[
+  {
+    "repo": "vnpy",
+    "sha": "c6e231caf32b7fc97e6459817fff66458cf7e7c4",
+    "url": "https://github.com/vnpy/vnpy",
+    "commit_date": "2026-10-06T09:38:50Z"
+  },
+  {
+    "repo": "vnpy_ctp",
+    "sha": "1be9bfb5292208e5c258cc769c90be4abe83f9a9",
+    "url": "https://github.com/vnpy/vnpy_ctp",
+    "commit_date": "2026-10-05T14:21:43Z"
+  },
+  {
+    "repo": "vnpy_ctastrategy",
+    "sha": "7a8768de9784dda35a7b261a7ade1dbfbff50919",
+    "url": "https://github.com/vnpy/vnpy_ctastrategy",
+    "commit_date": "2026-10-05T14:22:15Z"
+  }
+]

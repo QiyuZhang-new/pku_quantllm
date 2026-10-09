@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-10-09T10:35:41.737131+00:00",
+  "tests": {
+    "command": ".venv/bin/python -m unittest discover -s lesson02 -p test_homework.py -v",
+    "passed": 6,
+    "exit_code": 0
+  },
+  "factor": {
+    "command": ".venv/bin/python lesson02/factors/research.py",
+    "exit_code": 0,
+    "rounds": 1,
+    "candidates": 16
+  },
+  "ctp": {
+    "command": ".venv/bin/python lesson02/ctp_demo.py --config lesson02/config.local.json --symbols rb2701,ag2612,au2612 --seconds 60",
+    "exit_code": 2,
+    "ticks": 0,
+    "login_verified": false,
+    "trading_verified": false
+  },
+  "incomplete": [
+    "SimNow登录与实际行情回调未验收",
+    "没有开仓、平仓与最终空仓真实证据",
+    "未运行vnpy.alpha框架",
+    "题目llm-wiki.md模板不可获取"
+  ]
+}

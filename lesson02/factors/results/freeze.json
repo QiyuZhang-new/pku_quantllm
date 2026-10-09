@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-09T10:32:11.293392+00:00",
+  "protocol_sha256": "0fc75a87c53a94e58bf8a5ac2df83809b49b7896240c503ef9e56277c4c5737f",
+  "data_sha256": "328672b078a31285ea915e13b37a72dd671d51235d96570050114b40f75e589f",
+  "universe": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "DIA",
+    "XLF",
+    "XLK",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLP",
+    "XLY",
+    "XLU"
+  ]
+}

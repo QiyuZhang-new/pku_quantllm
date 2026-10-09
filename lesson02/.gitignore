@@ -1,0 +1,6 @@
+raw/
+config.local.json
+.ctp_flow/
+__pycache__/
+factors/data/*.json
+!factors/data/manifest.json

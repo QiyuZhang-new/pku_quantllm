@@ -1,0 +1,33 @@
+{
+  "round": 1,
+  "max_rounds": 1,
+  "universe": ["SPY","QQQ","IWM","DIA","XLF","XLK","XLE","XLV","XLI","XLP","XLY","XLU"],
+  "train": ["2019-01-01","2022-12-31"],
+  "valid": ["2023-01-01","2023-12-31"],
+  "test": ["2024-01-01","2025-12-31"],
+  "selection": "positive train mean daily RankIC; maximum validation mean daily RankIC; tie alphabetical; no re-selection after test",
+  "signal": "after day t close; buy next day open and sell next day close; top 3 equally weighted; no short; require volume > 0 and valid OHLC",
+  "label": "close[t+1]/open[t+1]-1; purge last date of each split",
+  "costs": "per side 1 bp fee + 5 bp slippage; stress 21 bp per side; US ETF no stamp tax; turnover 2 per fully invested day",
+  "capacity": "100000 USD capital; each order <= 1% of previous day close*volume",
+  "bootstrap": "seed 42, 1000 bootstrap resamples, fixed 10-day blocks, annualization 252",
+  "stop_rule": "16 fixed candidates; one run; test once; no future holdout claim",
+  "formulas": {
+    "gap":"open/prev_close-1",
+    "gap_neg":"-gap",
+    "gap_abs_signed":"gap*abs(gap)",
+    "gap_vol20":"gap/std(close.pct_change,20,lag1)",
+    "gap_range20":"gap/mean((high-low)/close,20,lag1)",
+    "gap_mom5":"gap*(prev_close/close.shift(6)-1)",
+    "gap_mom20":"gap*(prev_close/close.shift(21)-1)",
+    "gap_volume":"gap*volume/mean(volume,20,lag1)",
+    "gap_intraday":"gap*(close/open-1)",
+    "gap_closepos":"gap*((close-low)/(high-low)-0.5)",
+    "gap_mean3":"mean(gap,3)",
+    "gap_mean5":"mean(gap,5)",
+    "gap_mean10":"mean(gap,10)",
+    "gap_surprise":"gap-mean(gap,20,lag1)",
+    "gap_trend":"gap*(close/mean(close,20,lag1)-1)",
+    "gap_breakout":"gap*(close/max(high,20,lag1)-1)"
+  }
+}
