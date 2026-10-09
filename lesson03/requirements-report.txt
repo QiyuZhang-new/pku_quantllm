@@ -1,0 +1,2 @@
+# 可选：仅绘图报告需要；交易回放依赖仍见 requirements.txt。
+matplotlib>=3.8,<3.12

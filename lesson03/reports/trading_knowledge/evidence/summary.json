@@ -1,0 +1,319 @@
+{
+  "date": "2026-09-23",
+  "symbols": [
+    601600,
+    600036,
+    688981
+  ],
+  "end_ms": 54000000,
+  "events_processed": 717398,
+  "event_counts": {
+    "snp": 14995,
+    "ord": 433881,
+    "exe": 268522
+  },
+  "simulated_fills": 6,
+  "order_event_counts": {
+    "DEMO": 6,
+    "REJECTED": 9,
+    "SUBMITTED": 9,
+    "CANCELLED": 3,
+    "ACCEPTED": 6,
+    "FILL": 6
+  },
+  "fees_cents": 4993,
+  "initial_nav_cents": 117250000,
+  "final_nav_cents": 117108007,
+  "marked_pnl_cents": -141993,
+  "account": {
+    "cash_cents": 99995007,
+    "frozen_cash_cents": 0,
+    "available_cash_cents": 99995007,
+    "positions": {
+      "601600": {
+        "yesterday": 900,
+        "today": 100,
+        "frozen": 0,
+        "sellable": 900
+      },
+      "600036": {
+        "yesterday": 900,
+        "today": 100,
+        "frozen": 0,
+        "sellable": 900
+      },
+      "688981": {
+        "yesterday": 800,
+        "today": 200,
+        "frozen": 0,
+        "sellable": 800
+      }
+    },
+    "orders": [
+      {
+        "order_id": "SIM-000003",
+        "symbol": 600036,
+        "side": "BUY",
+        "price": 4090,
+        "quantity": 100,
+        "remaining": 0,
+        "submitted": 34200000,
+        "eligible": 34200100,
+        "sequence": 3,
+        "status": "FILLED",
+        "notional": 408900,
+        "fee": 504,
+        "reserved": 0,
+        "filled": 100
+      },
+      {
+        "order_id": "SIM-000004",
+        "symbol": 600036,
+        "side": "SELL",
+        "price": 4082,
+        "quantity": 100,
+        "remaining": 0,
+        "submitted": 34200000,
+        "eligible": 34200100,
+        "sequence": 4,
+        "status": "FILLED",
+        "notional": 409000,
+        "fee": 709,
+        "reserved": 0,
+        "filled": 100
+      },
+      {
+        "order_id": "SIM-000005",
+        "symbol": 600036,
+        "side": "BUY",
+        "price": 4079,
+        "quantity": 100,
+        "remaining": 100,
+        "submitted": 34200000,
+        "eligible": 34200100,
+        "sequence": 5,
+        "status": "CANCELLED",
+        "notional": 0,
+        "fee": 0,
+        "reserved": 0,
+        "filled": 0
+      },
+      {
+        "order_id": "SIM-000008",
+        "symbol": 688981,
+        "side": "BUY",
+        "price": 12204,
+        "quantity": 200,
+        "remaining": 0,
+        "submitted": 34201000,
+        "eligible": 34201100,
+        "sequence": 8,
+        "status": "FILLED",
+        "notional": 2440400,
+        "fee": 756,
+        "reserved": 0,
+        "filled": 200
+      },
+      {
+        "order_id": "SIM-000009",
+        "symbol": 688981,
+        "side": "SELL",
+        "price": 12199,
+        "quantity": 200,
+        "remaining": 0,
+        "submitted": 34201000,
+        "eligible": 34201100,
+        "sequence": 9,
+        "status": "FILLED",
+        "notional": 2440400,
+        "fee": 1976,
+        "reserved": 0,
+        "filled": 200
+      },
+      {
+        "order_id": "SIM-000010",
+        "symbol": 688981,
+        "side": "BUY",
+        "price": 12196,
+        "quantity": 200,
+        "remaining": 200,
+        "submitted": 34201000,
+        "eligible": 34201100,
+        "sequence": 10,
+        "status": "CANCELLED",
+        "notional": 0,
+        "fee": 0,
+        "reserved": 0,
+        "filled": 0
+      },
+      {
+        "order_id": "SIM-000013",
+        "symbol": 601600,
+        "side": "BUY",
+        "price": 930,
+        "quantity": 100,
+        "remaining": 0,
+        "submitted": 34202000,
+        "eligible": 34202100,
+        "sequence": 13,
+        "status": "FILLED",
+        "notional": 92900,
+        "fee": 501,
+        "reserved": 0,
+        "filled": 100
+      },
+      {
+        "order_id": "SIM-000014",
+        "symbol": 601600,
+        "side": "SELL",
+        "price": 925,
+        "quantity": 100,
+        "remaining": 0,
+        "submitted": 34202000,
+        "eligible": 34202100,
+        "sequence": 14,
+        "status": "FILLED",
+        "notional": 92800,
+        "fee": 547,
+        "reserved": 0,
+        "filled": 100
+      },
+      {
+        "order_id": "SIM-000015",
+        "symbol": 601600,
+        "side": "BUY",
+        "price": 922,
+        "quantity": 100,
+        "remaining": 100,
+        "submitted": 34202000,
+        "eligible": 34202100,
+        "sequence": 15,
+        "status": "CANCELLED",
+        "notional": 0,
+        "fee": 0,
+        "reserved": 0,
+        "filled": 0
+      }
+    ]
+  },
+  "plan": {
+    "total": 0,
+    "executed": 0,
+    "pending": 0,
+    "aliases": {}
+  },
+  "book_diagnostics": {
+    "601600": {
+      "status_I": 1,
+      "add": 117602,
+      "cancel": 32021,
+      "trade": 117595,
+      "status_O": 1,
+      "unpublished_aggressor": 116861,
+      "status_J": 1,
+      "status_C": 1
+    },
+    "600036": {
+      "status_I": 1,
+      "add": 94635,
+      "cancel": 24099,
+      "trade": 96287,
+      "status_O": 1,
+      "unpublished_aggressor": 95606,
+      "status_J": 1,
+      "status_C": 1
+    },
+    "688981": {
+      "status_I": 1,
+      "add": 103052,
+      "cancel": 62460,
+      "trade": 54640,
+      "status_O": 1,
+      "unpublished_aggressor": 54127,
+      "status_J": 1,
+      "status_C": 1
+    }
+  },
+  "snapshot_alignment": {
+    "compared": 14218,
+    "matched": 12484
+  },
+  "sequence_diagnostics": {},
+  "matching_showcase": {
+    "label": "以数据前收盘价为基准的合成申报，不是历史成交重撮合",
+    "continuous": [
+      {
+        "buy_id": "买方吃单",
+        "sell_id": "卖方先到",
+        "price": 928,
+        "quantity": 100
+      },
+      {
+        "buy_id": "买方吃单",
+        "sell_id": "卖方后到",
+        "price": 928,
+        "quantity": 100
+      }
+    ],
+    "opening_call": [
+      {
+        "buy_id": "集合买单",
+        "sell_id": "集合卖单",
+        "price": 927,
+        "quantity": 100
+      }
+    ],
+    "rules": {
+      "午间拒单": "当前时段不接受竞价申报",
+      "涨停外拒单": "价格超过涨跌停范围",
+      "正常限价申报": "通过"
+    }
+  },
+  "elapsed_seconds": 9.924,
+  "verification": {
+    "book_quantity_conservation": true,
+    "account_conservation": true,
+    "no_fill_before_eligible_time": true
+  },
+  "limit_prices": {
+    "601600": {
+      "board": "MAIN",
+      "previous_close": 927,
+      "limits": [
+        834,
+        1020
+      ]
+    },
+    "688981": {
+      "board": "STAR",
+      "previous_close": 12241,
+      "limits": [
+        9793,
+        14689
+      ]
+    },
+    "600036": {
+      "board": "MAIN",
+      "previous_close": 4082,
+      "limits": [
+        3674,
+        4490
+      ]
+    }
+  },
+  "fee_assumptions": {
+    "commission": "0.0003",
+    "minimum": "500",
+    "transfer": "0.00001",
+    "stamp_sell": "0.0005"
+  },
+  "limitations": [
+    "课堂数据的常规限价股假设；缺少IPO/停牌/除权静态标志",
+    "跨通道和同毫秒快照没有完整接收时钟，最优价对照只是诊断",
+    "快照成交是无市场冲击的近似，不证明真实可成交或策略有效",
+    "历史模拟仅连续竞价，独立内核支持开收盘集合竞价",
+    "市价申报、无涨跌幅股、大宗交易及盘后订单执行未实现并拒绝",
+    "当天买入锁定至后续真实交易日；不自动编造翌日行情",
+    "提前结束回放时保留活动委托及冻结资源，15:00才进行当日失效"
+  ]
+}

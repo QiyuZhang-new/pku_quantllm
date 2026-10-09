@@ -1,0 +1,10 @@
+BizIndex: int32
+Channel: int64
+FunctionCode: int8
+OrderKind: int8
+OrderNumber: int32
+OrderOriNo: int32
+Price: float
+Time: int32
+Volume: int32
+Symbol: int32

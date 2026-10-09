@@ -1,0 +1,4 @@
+# Preserve generated evidence bytes, including their recorded SHA256 digests.
+*.csv whitespace=cr-at-eol
+reports/trading_knowledge/figures/*.svg -diff whitespace=-blank-at-eol
+trading_system/references/*.txt whitespace=-blank-at-eol,-blank-at-eof

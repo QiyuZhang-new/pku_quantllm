@@ -1,0 +1,39 @@
+{"event": "DEMO", "time_ms": 34200000, "symbol": 600036, "purpose": "有效买卖、无效数量、涨跌停、冻结及撤单"}
+{"event": "REJECTED", "time_ms": 34200000, "order_id": "SIM-000001", "symbol": 600036, "side": "BUY", "reason": "买入数量不符合板块申报单位"}
+{"event": "REJECTED", "time_ms": 34200000, "order_id": "SIM-000002", "symbol": 600036, "side": "BUY", "reason": "价格超过涨跌停范围"}
+{"event": "SUBMITTED", "time_ms": 34200000, "order_id": "SIM-000003", "symbol": 600036, "side": "BUY", "price": 4090, "quantity": 100, "remaining": 100, "submitted": 34200000, "eligible": 34200100, "sequence": 3, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 409504, "filled": 0}
+{"event": "SUBMITTED", "time_ms": 34200000, "order_id": "SIM-000004", "symbol": 600036, "side": "SELL", "price": 4082, "quantity": 100, "remaining": 100, "submitted": 34200000, "eligible": 34200100, "sequence": 4, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 500, "filled": 0}
+{"event": "SUBMITTED", "time_ms": 34200000, "order_id": "SIM-000005", "symbol": 600036, "side": "BUY", "price": 4079, "quantity": 100, "remaining": 100, "submitted": 34200000, "eligible": 34200100, "sequence": 5, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 408404, "filled": 0}
+{"event": "CANCELLED", "time_ms": 34200000, "order_id": "SIM-000005", "symbol": 600036, "remaining": 100}
+{"event": "DEMO", "time_ms": 34201000, "symbol": 688981, "purpose": "有效买卖、无效数量、涨跌停、冻结及撤单"}
+{"event": "REJECTED", "time_ms": 34201000, "order_id": "SIM-000006", "symbol": 688981, "side": "BUY", "reason": "买入数量不符合板块申报单位"}
+{"event": "REJECTED", "time_ms": 34201000, "order_id": "SIM-000007", "symbol": 688981, "side": "BUY", "reason": "价格超过涨跌停范围"}
+{"event": "SUBMITTED", "time_ms": 34201000, "order_id": "SIM-000008", "symbol": 688981, "side": "BUY", "price": 12204, "quantity": 200, "remaining": 200, "submitted": 34201000, "eligible": 34201100, "sequence": 8, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 2441556, "filled": 0}
+{"event": "SUBMITTED", "time_ms": 34201000, "order_id": "SIM-000009", "symbol": 688981, "side": "SELL", "price": 12199, "quantity": 200, "remaining": 200, "submitted": 34201000, "eligible": 34201100, "sequence": 9, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 500, "filled": 0}
+{"event": "SUBMITTED", "time_ms": 34201000, "order_id": "SIM-000010", "symbol": 688981, "side": "BUY", "price": 12196, "quantity": 200, "remaining": 200, "submitted": 34201000, "eligible": 34201100, "sequence": 10, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 2439956, "filled": 0}
+{"event": "CANCELLED", "time_ms": 34201000, "order_id": "SIM-000010", "symbol": 688981, "remaining": 200}
+{"event": "DEMO", "time_ms": 34202000, "symbol": 601600, "purpose": "有效买卖、无效数量、涨跌停、冻结及撤单"}
+{"event": "REJECTED", "time_ms": 34202000, "order_id": "SIM-000011", "symbol": 601600, "side": "BUY", "reason": "买入数量不符合板块申报单位"}
+{"event": "REJECTED", "time_ms": 34202000, "order_id": "SIM-000012", "symbol": 601600, "side": "BUY", "reason": "价格超过涨跌停范围"}
+{"event": "SUBMITTED", "time_ms": 34202000, "order_id": "SIM-000013", "symbol": 601600, "side": "BUY", "price": 930, "quantity": 100, "remaining": 100, "submitted": 34202000, "eligible": 34202100, "sequence": 13, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 93501, "filled": 0}
+{"event": "SUBMITTED", "time_ms": 34202000, "order_id": "SIM-000014", "symbol": 601600, "side": "SELL", "price": 925, "quantity": 100, "remaining": 100, "submitted": 34202000, "eligible": 34202100, "sequence": 14, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 500, "filled": 0}
+{"event": "SUBMITTED", "time_ms": 34202000, "order_id": "SIM-000015", "symbol": 601600, "side": "BUY", "price": 922, "quantity": 100, "remaining": 100, "submitted": 34202000, "eligible": 34202100, "sequence": 15, "status": "PENDING", "notional": 0, "fee": 0, "reserved": 92701, "filled": 0}
+{"event": "CANCELLED", "time_ms": 34202000, "order_id": "SIM-000015", "symbol": 601600, "remaining": 100}
+{"event": "ACCEPTED", "time_ms": 34203000, "order_id": "SIM-000003", "symbol": 600036}
+{"event": "ACCEPTED", "time_ms": 34203000, "order_id": "SIM-000004", "symbol": 600036}
+{"event": "FILL", "time_ms": 34203000, "trade_id": "FILL-000001", "order_id": "SIM-000004", "symbol": 600036, "side": "SELL", "price_cents": 4090, "quantity": 100, "fee_cents": 709, "model": "next-visible-snapshot-depth"}
+{"event": "ACCEPTED", "time_ms": 34204000, "order_id": "SIM-000008", "symbol": 688981}
+{"event": "ACCEPTED", "time_ms": 34204000, "order_id": "SIM-000009", "symbol": 688981}
+{"event": "FILL", "time_ms": 34204000, "trade_id": "FILL-000002", "order_id": "SIM-000009", "symbol": 688981, "side": "SELL", "price_cents": 12202, "quantity": 200, "fee_cents": 1976, "model": "next-visible-snapshot-depth"}
+{"event": "ACCEPTED", "time_ms": 34205000, "order_id": "SIM-000013", "symbol": 601600}
+{"event": "FILL", "time_ms": 34205000, "trade_id": "FILL-000003", "order_id": "SIM-000013", "symbol": 601600, "side": "BUY", "price_cents": 929, "quantity": 100, "fee_cents": 501, "model": "next-visible-snapshot-depth"}
+{"event": "ACCEPTED", "time_ms": 34205000, "order_id": "SIM-000014", "symbol": 601600}
+{"event": "FILL", "time_ms": 34205000, "trade_id": "FILL-000004", "order_id": "SIM-000014", "symbol": 601600, "side": "SELL", "price_cents": 928, "quantity": 100, "fee_cents": 547, "model": "next-visible-snapshot-depth"}
+{"event": "DEMO", "time_ms": 34205000, "symbol": 601600, "purpose": "尝试卖出昨日库存加今日买入；应触发T+1拒单"}
+{"event": "REJECTED", "time_ms": 34205000, "order_id": "SIM-000016", "symbol": 601600, "side": "SELL", "reason": "可卖持仓不足（含T+1/已冻结持仓）"}
+{"event": "FILL", "time_ms": 34210000, "trade_id": "FILL-000005", "order_id": "SIM-000008", "symbol": 688981, "side": "BUY", "price_cents": 12202, "quantity": 200, "fee_cents": 756, "model": "next-visible-snapshot-depth"}
+{"event": "DEMO", "time_ms": 34210000, "symbol": 688981, "purpose": "尝试卖出昨日库存加今日买入；应触发T+1拒单"}
+{"event": "REJECTED", "time_ms": 34210000, "order_id": "SIM-000017", "symbol": 688981, "side": "SELL", "reason": "可卖持仓不足（含T+1/已冻结持仓）"}
+{"event": "FILL", "time_ms": 34224000, "trade_id": "FILL-000006", "order_id": "SIM-000003", "symbol": 600036, "side": "BUY", "price_cents": 4089, "quantity": 100, "fee_cents": 504, "model": "next-visible-snapshot-depth"}
+{"event": "DEMO", "time_ms": 34224000, "symbol": 600036, "purpose": "尝试卖出昨日库存加今日买入；应触发T+1拒单"}
+{"event": "REJECTED", "time_ms": 34224000, "order_id": "SIM-000018", "symbol": 600036, "side": "SELL", "reason": "可卖持仓不足（含T+1/已冻结持仓）"}

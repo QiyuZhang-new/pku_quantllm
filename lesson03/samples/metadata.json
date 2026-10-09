@@ -1,0 +1,385 @@
+{
+  "exe": {
+    "source": "sse50_20260923/exe_20260923.parquet",
+    "rows": 3792934,
+    "columns": 12,
+    "sample_source_row_positions_zero_based": [
+      14616,
+      14617,
+      14618,
+      14619,
+      14620
+    ],
+    "filter": "Time>=93000000, Price>0, Volume>0",
+    "head": "lesson03/samples/exe_head5.csv",
+    "trading": "lesson03/samples/exe_trading5.csv",
+    "fields": [
+      {
+        "name": "AskOrder",
+        "type": "int32"
+      },
+      {
+        "name": "BSFlag",
+        "type": "int8"
+      },
+      {
+        "name": "BidOrder",
+        "type": "int32"
+      },
+      {
+        "name": "BizIndex",
+        "type": "int32"
+      },
+      {
+        "name": "Channel",
+        "type": "int32"
+      },
+      {
+        "name": "FunctionCode",
+        "type": "int8"
+      },
+      {
+        "name": "Index",
+        "type": "int32"
+      },
+      {
+        "name": "OrderKind",
+        "type": "int8"
+      },
+      {
+        "name": "Price",
+        "type": "float"
+      },
+      {
+        "name": "Time",
+        "type": "int32"
+      },
+      {
+        "name": "Volume",
+        "type": "int32"
+      },
+      {
+        "name": "Symbol",
+        "type": "int32"
+      }
+    ]
+  },
+  "ord": {
+    "source": "sse50_20260923/ord_20260923.parquet",
+    "rows": 6276360,
+    "columns": 10,
+    "sample_source_row_positions_zero_based": [
+      216594,
+      216595,
+      216596,
+      216597,
+      216598
+    ],
+    "filter": "Time>=93000000, Price>0, Volume>0",
+    "head": "lesson03/samples/ord_head5.csv",
+    "trading": "lesson03/samples/ord_trading5.csv",
+    "fields": [
+      {
+        "name": "BizIndex",
+        "type": "int32"
+      },
+      {
+        "name": "Channel",
+        "type": "int64"
+      },
+      {
+        "name": "FunctionCode",
+        "type": "int8"
+      },
+      {
+        "name": "OrderKind",
+        "type": "int8"
+      },
+      {
+        "name": "OrderNumber",
+        "type": "int32"
+      },
+      {
+        "name": "OrderOriNo",
+        "type": "int32"
+      },
+      {
+        "name": "Price",
+        "type": "float"
+      },
+      {
+        "name": "Time",
+        "type": "int32"
+      },
+      {
+        "name": "Volume",
+        "type": "int32"
+      },
+      {
+        "name": "Symbol",
+        "type": "int32"
+      }
+    ]
+  },
+  "snp": {
+    "source": "sse50_20260923/snp_20260923.parquet",
+    "rows": 252631,
+    "columns": 61,
+    "sample_source_row_positions_zero_based": [
+      9808,
+      9809,
+      9810,
+      9811,
+      9812
+    ],
+    "filter": "Time>=93000000, Price>0, Volume>0, BidPrice1>0, AskPrice1>0",
+    "head": "lesson03/samples/snp_head5.csv",
+    "trading": "lesson03/samples/snp_trading5.csv",
+    "fields": [
+      {
+        "name": "AccTurnover",
+        "type": "int64"
+      },
+      {
+        "name": "AccVolume",
+        "type": "int64"
+      },
+      {
+        "name": "AfterMatchItem",
+        "type": "int32"
+      },
+      {
+        "name": "AfterPrice",
+        "type": "float"
+      },
+      {
+        "name": "AfterTurnover",
+        "type": "int64"
+      },
+      {
+        "name": "AfterVolume",
+        "type": "int32"
+      },
+      {
+        "name": "AskAvgPrice",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice1",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice2",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice3",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice4",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice5",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice6",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice7",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice8",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice9",
+        "type": "float"
+      },
+      {
+        "name": "AskPrice10",
+        "type": "float"
+      },
+      {
+        "name": "AskVolume1",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume2",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume3",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume4",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume5",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume6",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume7",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume8",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume9",
+        "type": "double"
+      },
+      {
+        "name": "AskVolume10",
+        "type": "double"
+      },
+      {
+        "name": "BSFlag",
+        "type": "int8"
+      },
+      {
+        "name": "BidAvgPrice",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice1",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice2",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice3",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice4",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice5",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice6",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice7",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice8",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice9",
+        "type": "float"
+      },
+      {
+        "name": "BidPrice10",
+        "type": "float"
+      },
+      {
+        "name": "BidVolume1",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume2",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume3",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume4",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume5",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume6",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume7",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume8",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume9",
+        "type": "double"
+      },
+      {
+        "name": "BidVolume10",
+        "type": "double"
+      },
+      {
+        "name": "High",
+        "type": "float"
+      },
+      {
+        "name": "Low",
+        "type": "float"
+      },
+      {
+        "name": "MatchItem",
+        "type": "int32"
+      },
+      {
+        "name": "Open",
+        "type": "float"
+      },
+      {
+        "name": "PreClose",
+        "type": "float"
+      },
+      {
+        "name": "Price",
+        "type": "float"
+      },
+      {
+        "name": "Time",
+        "type": "int32"
+      },
+      {
+        "name": "TotalAskVolume",
+        "type": "int64"
+      },
+      {
+        "name": "TotalBidVolume",
+        "type": "int64"
+      },
+      {
+        "name": "Turnover",
+        "type": "int64"
+      },
+      {
+        "name": "Volume",
+        "type": "int32"
+      },
+      {
+        "name": "Symbol",
+        "type": "int32"
+      }
+    ]
+  }
+}

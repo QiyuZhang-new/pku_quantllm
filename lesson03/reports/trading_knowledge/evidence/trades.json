@@ -1,0 +1,68 @@
+[
+  {
+    "trade_id": "FILL-000001",
+    "order_id": "SIM-000004",
+    "symbol": 600036,
+    "side": "SELL",
+    "time_ms": 34203000,
+    "price_cents": 4090,
+    "quantity": 100,
+    "fee_cents": 709,
+    "model": "next-visible-snapshot-depth"
+  },
+  {
+    "trade_id": "FILL-000002",
+    "order_id": "SIM-000009",
+    "symbol": 688981,
+    "side": "SELL",
+    "time_ms": 34204000,
+    "price_cents": 12202,
+    "quantity": 200,
+    "fee_cents": 1976,
+    "model": "next-visible-snapshot-depth"
+  },
+  {
+    "trade_id": "FILL-000003",
+    "order_id": "SIM-000013",
+    "symbol": 601600,
+    "side": "BUY",
+    "time_ms": 34205000,
+    "price_cents": 929,
+    "quantity": 100,
+    "fee_cents": 501,
+    "model": "next-visible-snapshot-depth"
+  },
+  {
+    "trade_id": "FILL-000004",
+    "order_id": "SIM-000014",
+    "symbol": 601600,
+    "side": "SELL",
+    "time_ms": 34205000,
+    "price_cents": 928,
+    "quantity": 100,
+    "fee_cents": 547,
+    "model": "next-visible-snapshot-depth"
+  },
+  {
+    "trade_id": "FILL-000005",
+    "order_id": "SIM-000008",
+    "symbol": 688981,
+    "side": "BUY",
+    "time_ms": 34210000,
+    "price_cents": 12202,
+    "quantity": 200,
+    "fee_cents": 756,
+    "model": "next-visible-snapshot-depth"
+  },
+  {
+    "trade_id": "FILL-000006",
+    "order_id": "SIM-000003",
+    "symbol": 600036,
+    "side": "BUY",
+    "time_ms": 34224000,
+    "price_cents": 4089,
+    "quantity": 100,
+    "fee_cents": 504,
+    "model": "next-visible-snapshot-depth"
+  }
+]

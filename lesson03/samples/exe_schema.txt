@@ -1,0 +1,12 @@
+AskOrder: int32
+BSFlag: int8
+BidOrder: int32
+BizIndex: int32
+Channel: int32
+FunctionCode: int8
+Index: int32
+OrderKind: int8
+Price: float
+Time: int32
+Volume: int32
+Symbol: int32

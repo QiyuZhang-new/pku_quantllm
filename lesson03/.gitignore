@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+runs/
+sse50_20260923/
+sse50_20260923.zip
+__MACOSX/
+.DS_Store
