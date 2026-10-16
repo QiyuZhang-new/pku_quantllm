@@ -1,0 +1,19 @@
+[project]
+name = "quantllm-lesson04"
+version = "0.1.0"
+description = "QuantLLM 第四讲：回测与行情数据分析"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "altair>=6,<7",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "streamlit>=1.66,<2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "uv",
+]
