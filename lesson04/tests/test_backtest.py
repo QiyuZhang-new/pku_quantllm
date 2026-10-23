@@ -40,7 +40,8 @@ class Script:
 
 
 def run(data, targets, **config):
-    options = dict(initial_cash=1000.0, commission=0.0, sell_tax=0.0, slippage=0.0, lot_size=0)
+    options = dict(initial_cash=1000.0, commission=0.0, sell_tax=0.0, slippage=0.0, lot_size=0,
+                   apply_price_limits=False, defer_suspended_orders=False)
     options.update(config)
     return BacktestEngine(data, BacktestConfig(**options)).run(Script(targets))
 

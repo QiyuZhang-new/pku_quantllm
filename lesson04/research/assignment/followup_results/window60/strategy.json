@@ -1,0 +1,11 @@
+{
+  "method": "market_deviation",
+  "k": 200,
+  "holding": 20,
+  "window": 60,
+  "min_listed": 120,
+  "min_adv": 100000000.0,
+  "liquidation_days": 5,
+  "notice_file": "corporate_notices.csv",
+  "market_beta_fixed": 1
+}

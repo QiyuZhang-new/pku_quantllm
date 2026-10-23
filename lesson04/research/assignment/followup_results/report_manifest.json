@@ -1,0 +1,8 @@
+{
+  "report": "ASSIGNMENT_AUDITED_REPORT.md",
+  "sha256": "8df3a109bcb0985ee32c3c876388547ffedb483e8eeb42e20bcb3c6283c1b8fa",
+  "generator_sha256": "5caf68ff60cad05153d8494c700a20f7d9f3bbf3927f346bf1d9bedb0e0a182d",
+  "audit_sha256": "58384e95b0928dab0200e64093c46f9ed6cee961f94d266a130fb1b2cb7d83eb",
+  "comparison_image_sha256": "9904ccc964a455947b182c0140f41951463a7e8fb009bba110a8bd4429f08b9e",
+  "qualified_historical_sample": true
+}

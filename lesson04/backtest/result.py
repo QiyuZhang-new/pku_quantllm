@@ -16,7 +16,7 @@ def performance(equity: pd.DataFrame, initial_cash: float, annual_days: int):
     drawdown = nav / peak - 1
     volatility = float(returns.std(ddof=1)) if len(returns) > 1 else 0.0
     annual_return = float(np.expm1(np.log(nav.iloc[-1]) * annual_days / len(nav)))
-    return {
+    metrics = {
         "initial_cash": initial_cash,
         "final_equity": float(equity["equity"].iloc[-1]),
         "final_cash": float(equity["cash"].iloc[-1]),
@@ -32,6 +32,18 @@ def performance(equity: pd.DataFrame, initial_cash: float, annual_days: int):
         "trading_days": len(equity),
         "stale_position_days": int(equity["stale_positions"].sum()),
     }
+    if "attempted_orders" in equity:
+        attempts = int(equity["attempted_orders"].sum())
+        rejected = int(equity["limit_rejected_orders"].sum())
+        metrics.update({
+            "attempted_orders": attempts,
+            "limit_rejected_orders": rejected,
+            "limit_rejected_ratio": rejected / attempts if attempts else 0.0,
+            "suspended_order_attempts": int(equity["suspended_orders"].sum()),
+            "suspended_attempt_ratio": float(equity["suspended_orders"].sum() / attempts) if attempts else 0.0,
+            "deferred_fills": int(equity["deferred_fills"].sum()),
+        })
+    return metrics
 
 
 @dataclass

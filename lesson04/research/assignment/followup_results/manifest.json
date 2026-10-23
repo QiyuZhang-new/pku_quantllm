@@ -1,0 +1,50 @@
+{
+  "created_at_utc": "2026-10-16T15:23:58.365240+00:00",
+  "source_code": {
+    "backtest/engine.py": "256d4cecd705751133f26779647db283ba1a9d4f5494753c48c801bbb6b2f321",
+    "backtest/data.py": "56f339005d7834de2c297546ebea36dfff603bc3ec6e4fd1458a740acf502c94",
+    "backtest/result.py": "26c652f1c4275e850d05c5453e25ad0a90dbb5be8c3c35449795d771ce7c480a",
+    "backtest/market_rules.py": "2532f3e42b2b40882f646394d7edb733e637a4ce5b85b211dda3313109dccbba",
+    "backtest/market_deviation_strategy.py": "1ad806a13f125ce79439af7da530bf04cc1fe7d6a89f74cc5f9610bf0c6e4506",
+    "research/assignment/run.py": "b55eb6eab504e6d03ab1522d256f8ef87425f132e6abd4bf88d017f173c937fb",
+    "research/assignment/run_followup.py": "e5186526125f165da3fc3c0b0ad31c5850dc8c5ca8fba328480f1e85905ea0d6",
+    "research/assignment/FOLLOWUP_PROTOCOL.md": "172e05431f935e0eac91de2f112663ab39176e37dccdfeba791ec86b45014c17",
+    "tests/test_market_deviation.py": "861cf57c687b1148c7028cf0e53d49a5be3efca77e286f5a486d4c81c9883348"
+  },
+  "raw_inputs": {
+    "open": "a75e7aa3dac9e101f2c3cfff85728b26a29ea50ccc6ec46c315a36e8476d5f92",
+    "close": "621b7b381f96c7d162317ac67c8831aebfc5e78f4b1ecd59159fc93e0ea109e7",
+    "cumadj": "5ebc13623115743c39b2cb56dbe365f10c4c72d6fed6ac4041d9377895439173",
+    "amt": "cd2a2f43e273963f93230163813aafaddb52307d1805ee1a583aeab931e418c2"
+  },
+  "external_inputs": {
+    "corporate_notices.csv": "166390d226906b1fb80bb31d8cb439f7f2959dddae1cde80a586402ee9e6b74f",
+    "csi300.csv": "0f094a26445247b584cf250a850e88527a0c2a8e87d9a2edffe0e2ab9180114b",
+    "sse.csv": "24df081ec1cf59e744f57b6cf4c70021e9f9073b019f36a1c85209cb2cce7ed7",
+    "data_crosschecks.json": "e14ba176b78c555ceeb4b1cd79e8ce49a3b5960f685c4d7a0472a0711772ead6"
+  },
+  "config": {
+    "initial_cash": 1000000000.0,
+    "commission": 0.0001,
+    "sell_tax": 0.0005,
+    "slippage": 0.0005,
+    "lot_size": 100,
+    "annual_days": 252,
+    "start": "2025-01-02",
+    "end": "2026-09-30",
+    "apply_price_limits": true,
+    "defer_suspended_orders": true,
+    "execution_policy": "standard",
+    "prestart_signal": true,
+    "liquidate_on_last_day": true,
+    "max_participation": 0.05,
+    "volume_lookback": 20,
+    "record_positions": true,
+    "exit_st_on_open": true,
+    "board_lots": true
+  },
+  "default_window": 20,
+  "exploratory_after_failed_round1": true,
+  "prior_results": "research/assignment/results",
+  "runtime_seconds": 58.916986191645265
+}

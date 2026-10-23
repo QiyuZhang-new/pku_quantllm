@@ -1,0 +1,65 @@
+{
+  "checks": 5042734,
+  "passed": true,
+  "failures": [],
+  "failure_count": 0,
+  "experiments": [
+    {
+      "experiment": "selected",
+      "trades": 3012,
+      "end_positions": 5,
+      "max_trade_over_prior_adv": 0.04999999366546777,
+      "reconstructed_final_cash": 1033095714.5074627,
+      "reconstructed_final_equity": 1043935913.7510674
+    },
+    {
+      "experiment": "slip_0",
+      "trades": 3013,
+      "end_positions": 5,
+      "max_trade_over_prior_adv": 0.04999999366546777,
+      "reconstructed_final_cash": 1040066375.9377252,
+      "reconstructed_final_equity": 1051146717.3768716
+    },
+    {
+      "experiment": "slip_15bp",
+      "trades": 3011,
+      "end_positions": 5,
+      "max_trade_over_prior_adv": 0.04999999366546777,
+      "reconstructed_final_cash": 1019313876.0109816,
+      "reconstructed_final_equity": 1029687401.4949608
+    },
+    {
+      "experiment": "equal_weight_liquid",
+      "trades": 412465,
+      "end_positions": 17,
+      "max_trade_over_prior_adv": 0.016111220784381753,
+      "reconstructed_final_cash": 1191760415.552838,
+      "reconstructed_final_equity": 1201155110.5745933
+    },
+    {
+      "experiment": "train_lowvol60",
+      "trades": 3554,
+      "end_positions": 9,
+      "max_trade_over_prior_adv": 0.04999999979806147,
+      "reconstructed_final_cash": 1237024831.3826547,
+      "reconstructed_final_equity": 1265294948.053329
+    },
+    {
+      "experiment": "train_momentum120",
+      "trades": 6233,
+      "end_positions": 1,
+      "max_trade_over_prior_adv": 0.04999999895480345,
+      "reconstructed_final_cash": 691162096.8187861,
+      "reconstructed_final_equity": 698826616.8187861
+    },
+    {
+      "experiment": "train_lowvol_momentum",
+      "trades": 3932,
+      "end_positions": 18,
+      "max_trade_over_prior_adv": 0.04999999821626974,
+      "reconstructed_final_cash": 1167545871.68378,
+      "reconstructed_final_equity": 1202217466.8141558
+    }
+  ],
+  "audit_source_sha256": "594541e373bfcc603389a2d81552184b3eed1900a82d0a43a23bb93a05e9a057"
+}

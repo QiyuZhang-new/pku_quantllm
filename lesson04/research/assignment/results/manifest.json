@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-10-16T15:17:38.101783+00:00",
+  "runtime_seconds": 54.41520422603935,
+  "raw_inputs": {
+    "open": "a75e7aa3dac9e101f2c3cfff85728b26a29ea50ccc6ec46c315a36e8476d5f92",
+    "close": "621b7b381f96c7d162317ac67c8831aebfc5e78f4b1ecd59159fc93e0ea109e7",
+    "cumadj": "5ebc13623115743c39b2cb56dbe365f10c4c72d6fed6ac4041d9377895439173",
+    "amt": "cd2a2f43e273963f93230163813aafaddb52307d1805ee1a583aeab931e418c2"
+  },
+  "source_code": {
+    "backtest/engine.py": "256d4cecd705751133f26779647db283ba1a9d4f5494753c48c801bbb6b2f321",
+    "backtest/factor_strategy.py": "fd03fb86c9515f0a99ee7b8c395d17f9ccf0daec4543ff2910c760341947c402",
+    "backtest/market_rules.py": "2532f3e42b2b40882f646394d7edb733e637a4ce5b85b211dda3313109dccbba",
+    "backtest/data.py": "56f339005d7834de2c297546ebea36dfff603bc3ec6e4fd1458a740acf502c94",
+    "backtest/result.py": "26c652f1c4275e850d05c5453e25ad0a90dbb5be8c3c35449795d771ce7c480a",
+    "research/assignment/run.py": "b55eb6eab504e6d03ab1522d256f8ef87425f132e6abd4bf88d017f173c937fb",
+    "research/assignment/fetch_data.py": "6948fcc54ae501931c7ef6a65a9301047e32fd374621675172dca184e5c0f999",
+    "research/assignment/fetch_indices.py": "24f769bf26cf170d3af20f5ffa784841b07ff01013d710ee9a1c7281c03889d4",
+    "research/assignment/data_quality.py": "9eded41e916434ce7737dc4ef4cffb013233001665d7dbbf4e5dc45f408f7290",
+    "research/assignment/PROTOCOL.md": "117f1a309d39d46308d3e7138aa85d2f69446dccccc19e2bce6a35004a06c159",
+    "tests/test_assignment.py": "1a65b0a9b236c193a0bdb585907c73a299968eb889a5f3eac22bbed5ef06db50"
+  },
+  "index_manifest_sha256": "59ecc56babd3fa317c8d64f445a89e89bbaa1c0963d4077946dbfa7d9758c485",
+  "status_manifest_sha256": "6aa5c53ae7d79cb1e9a51e7551246571433ab1bb54e130c1fea9703c814ddd3a",
+  "status_files": 5413,
+  "data_crosschecks_sha256": "e14ba176b78c555ceeb4b1cd79e8ce49a3b5960f685c4d7a0472a0711772ead6",
+  "external_inputs": {
+    "csi300.csv": "0f094a26445247b584cf250a850e88527a0c2a8e87d9a2edffe0e2ab9180114b",
+    "sse.csv": "24df081ec1cf59e744f57b6cf4c70021e9f9073b019f36a1c85209cb2cce7ed7",
+    "csi300_tencent.json": "c5f49416535d7f2a36dae47f2d5ac4f3c563f778ff5b0cbab07135ce68c98347",
+    "sse_tencent.json": "ff421f1a7d42121f6ef99877b5bf8c06a0703325da117e4456c66a96da36f939",
+    "indices_manifest.json": "59ecc56babd3fa317c8d64f445a89e89bbaa1c0963d4077946dbfa7d9758c485",
+    "data_crosschecks.json": "e14ba176b78c555ceeb4b1cd79e8ce49a3b5960f685c4d7a0472a0711772ead6"
+  },
+  "chosen_method": "lowvol60",
+  "config": {
+    "initial_cash": 1000000000.0,
+    "commission": 0.0001,
+    "sell_tax": 0.0005,
+    "slippage": 0.0005,
+    "lot_size": 100,
+    "annual_days": 252,
+    "start": "2025-01-02",
+    "end": "2026-09-30",
+    "apply_price_limits": true,
+    "defer_suspended_orders": true,
+    "execution_policy": "standard",
+    "prestart_signal": true,
+    "liquidate_on_last_day": true,
+    "max_participation": 0.05,
+    "volume_lookback": 20,
+    "record_positions": true,
+    "exit_st_on_open": true,
+    "board_lots": true
+  }
+}

@@ -16,7 +16,7 @@ def main():
     parser.add_argument("--end")
     parser.add_argument("--initial-cash", type=float, default=1_000_000)
     parser.add_argument("--commission", type=float, default=0.0003)
-    parser.add_argument("--sell-tax", type=float, default=0.0)
+    parser.add_argument("--sell-tax", type=float, default=None, help="固定卖出税率；省略时按历史日期分段")
     parser.add_argument("--slippage", type=float, default=0.0005)
     parser.add_argument("--lot-size", type=int, default=100, help="每手份额，0 表示允许零碎份额")
     parser.add_argument("--rebalance", choices=["daily", "weekly", "monthly"], default="monthly")

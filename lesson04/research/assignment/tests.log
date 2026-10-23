@@ -1,0 +1,113 @@
+test_capacity_uses_only_prior_amount_not_execution_day_amount (test_assignment.AssignmentExecutionTests.test_capacity_uses_only_prior_amount_not_execution_day_amount) ... ok
+test_existing_stock_exits_when_st_takes_effect_before_open (test_assignment.AssignmentExecutionTests.test_existing_stock_exits_when_st_takes_effect_before_open) ... ok
+test_failed_last_day_sell_is_visible (test_assignment.AssignmentExecutionTests.test_failed_last_day_sell_is_visible) ... ok
+test_official_raw_reference_handles_ex_rights (test_assignment.AssignmentExecutionTests.test_official_raw_reference_handles_ex_rights) ... ok
+test_prestart_signal_and_last_day_liquidation_include_all_costs (test_assignment.AssignmentExecutionTests.test_prestart_signal_and_last_day_liquidation_include_all_costs) ... ok
+test_st_or_unknown_at_execution_cannot_be_bought (test_assignment.AssignmentExecutionTests.test_st_or_unknown_at_execution_cannot_be_bought) ... ok
+test_st_rule_changes_on_actual_effective_date (test_assignment.AssignmentExecutionTests.test_st_rule_changes_on_actual_effective_date) ... ok
+test_standard_302_is_chinext_twenty_percent (test_assignment.AssignmentExecutionTests.test_standard_302_is_chinext_twenty_percent) ... ok
+test_standard_limit_down_blocks_sell_and_keeps_position (test_assignment.AssignmentExecutionTests.test_standard_limit_down_blocks_sell_and_keeps_position) ... ok
+test_standard_limit_up_blocks_buy (test_assignment.AssignmentExecutionTests.test_standard_limit_up_blocks_buy) ... ok
+test_star_minimum_200_then_single_share_increments (test_assignment.AssignmentExecutionTests.test_star_minimum_200_then_single_share_increments) ... ok
+test_weight_normalization_accepts_pandas_readonly_array (test_assignment.AssignmentExecutionTests.test_weight_normalization_accepts_pandas_readonly_array) ... ok
+test_actual_factor_future_rows_cannot_change_selection (test_assignment.FactorTests.test_actual_factor_future_rows_cannot_change_selection) ... ok
+test_current_st_and_unknown_are_excluded (test_assignment.FactorTests.test_current_st_and_unknown_are_excluded) ... ok
+test_missing_return_does_not_become_zero_or_forward_filled (test_assignment.FactorTests.test_missing_return_does_not_become_zero_or_forward_filled) ... ok
+test_schedule_is_fixed_before_future_returns (test_assignment.FactorTests.test_schedule_is_fixed_before_future_returns) ... ok
+test_adjustment_prevents_false_split_loss (test_backtest.AccountingTests.test_adjustment_prevents_false_split_loss) ... ok
+test_blocked_sell_does_not_fund_other_purchase (test_backtest.AccountingTests.test_blocked_sell_does_not_fund_other_purchase) ... ok
+test_cash_only_and_undefined_sharpe (test_backtest.AccountingTests.test_cash_only_and_undefined_sharpe) ... ok
+test_close_signal_executes_at_next_open (test_backtest.AccountingTests.test_close_signal_executes_at_next_open) ... ok
+test_empty_target_liquidates_odd_shares (test_backtest.AccountingTests.test_empty_target_liquidates_odd_shares) ... ok
+test_factor_gap_restores_adjustment_once (test_backtest.AccountingTests.test_factor_gap_restores_adjustment_once) ... ok
+test_fees_slippage_tax_and_no_cash_overdraft (test_backtest.AccountingTests.test_fees_slippage_tax_and_no_cash_overdraft) ... ok
+test_initial_loss_counts_in_drawdown (test_backtest.AccountingTests.test_initial_loss_counts_in_drawdown) ... ok
+test_lot_rounding_leaves_residual_cash (test_backtest.AccountingTests.test_lot_rounding_leaves_residual_cash) ... ok
+test_missing_factor_blocks_buy (test_backtest.AccountingTests.test_missing_factor_blocks_buy) ... ok
+test_missing_price_on_adjustment_day_preserves_adjusted_value (test_backtest.AccountingTests.test_missing_price_on_adjustment_day_preserves_adjusted_value) ... ok
+test_missing_price_retains_position_and_does_not_retry_order (test_backtest.AccountingTests.test_missing_price_retains_position_and_does_not_retry_order) ... ok
+test_open_marks_new_purchase_when_close_missing (test_backtest.AccountingTests.test_open_marks_new_purchase_when_close_missing) ... ok
+test_sell_releases_cash_before_buy (test_backtest.AccountingTests.test_sell_releases_cash_before_buy) ... ok
+test_adjusted_history_uses_matching_factors (test_backtest.InterfaceTests.test_adjusted_history_uses_matching_factors) ... ok
+test_bad_weights_fail_explicitly (test_backtest.InterfaceTests.test_bad_weights_fail_explicitly) ... ok
+test_export_and_no_overwrite (test_backtest.InterfaceTests.test_export_and_no_overwrite) ... ok
+test_future_prices_cannot_change_earlier_trades (test_backtest.InterfaceTests.test_future_prices_cannot_change_earlier_trades) ... ok
+test_history_is_past_only_and_defensive_copy (test_backtest.InterfaceTests.test_history_is_past_only_and_defensive_copy) ... ok
+test_invalid_config_and_empty_period (test_backtest.InterfaceTests.test_invalid_config_and_empty_period) ... ok
+test_invalid_data_alignment_rejected (test_backtest.InterfaceTests.test_invalid_data_alignment_rejected) ... ok
+test_monthly_strategy_uses_observed_period (test_backtest.InterfaceTests.test_monthly_strategy_uses_observed_period) ... ok
+test_start_keeps_prior_history_but_does_not_trade_before_start (test_backtest.InterfaceTests.test_start_keeps_prior_history_but_does_not_trade_before_start) ... ok
+test_all_symbols_mode_passes_complete_universe (test_dashboard.ApplicationTests.test_all_symbols_mode_passes_complete_universe) ... 2026-10-23 03:48:16.085 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_empty_universe_displays_validation_error (test_dashboard.ApplicationTests.test_empty_universe_displays_validation_error) ... 2026-10-23 03:48:16.769 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_failed_run_keeps_previous_successful_result (test_dashboard.ApplicationTests.test_failed_run_keeps_previous_successful_result) ... 2026-10-23 03:48:16.887 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-23 03:48:17.204 No runtime found, using MemoryCacheStorageManager
+网页回测失败
+Traceback (most recent call last):
+  File "/home/zqy/Personal-Growth/database/course/course-homework/QuantLLM/lesson04/app.py", line 118, in sidebar
+    activate(execute_experiment(DATA_DIR, chosen, config, strategy, PERIODS[rebalance], RUNS_DIR))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+RuntimeError: 测试失败
+ok
+test_historical_tax_default_and_explicit_fixed_override (test_dashboard.ApplicationTests.test_historical_tax_default_and_explicit_fixed_override) ... 2026-10-23 03:48:17.271 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_history_load_does_not_rerun_engine (test_dashboard.ApplicationTests.test_history_load_does_not_rerun_engine) ... 2026-10-23 03:48:18.083 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_initial_page_does_not_run_backtest (test_dashboard.ApplicationTests.test_initial_page_does_not_run_backtest) ... 2026-10-23 03:48:18.265 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_missing_data_still_allows_history (test_dashboard.ApplicationTests.test_missing_data_still_allows_history) ... 2026-10-23 03:48:18.526 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_parameter_edit_does_not_change_completed_experiment (test_dashboard.ApplicationTests.test_parameter_edit_does_not_change_completed_experiment) ... 2026-10-23 03:48:18.709 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_submit_render_filter_and_prepare_download (test_dashboard.ApplicationTests.test_submit_render_filter_and_prepare_download) ... 2026-10-23 03:48:19.093 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_empty_universe_rejected_without_output (test_dashboard.ExperimentTests.test_empty_universe_rejected_without_output) ... ok
+test_history_round_trip_and_zip (test_dashboard.ExperimentTests.test_history_round_trip_and_zip) ... ok
+test_metadata_does_not_require_loading_all_fields (test_dashboard.ExperimentTests.test_metadata_does_not_require_loading_all_fields) ... ok
+test_partial_output_not_listed_as_history (test_dashboard.ExperimentTests.test_partial_output_not_listed_as_history) ... ok
+test_web_result_matches_engine_and_preserves_parameters (test_dashboard.ExperimentTests.test_web_result_matches_engine_and_preserves_parameters) ... ok
+test_future_prices_and_status_cannot_change_signal (test_market_deviation.MarketDeviationTests.test_future_prices_and_status_cannot_change_signal) ... ok
+test_liquidation_sells_one_remaining_day_fraction (test_market_deviation.MarketDeviationTests.test_liquidation_sells_one_remaining_day_fraction) ... ok
+test_low_market_deviation_differs_from_low_total_volatility (test_market_deviation.MarketDeviationTests.test_low_market_deviation_differs_from_low_total_volatility) ... ok
+test_notice_cannot_exclude_stock_before_announcement (test_market_deviation.MarketDeviationTests.test_notice_cannot_exclude_stock_before_announcement) ... ok
+test_st_is_excluded_even_if_it_tracks_market_well (test_market_deviation.MarketDeviationTests.test_st_is_excluded_even_if_it_tracks_market_well) ... ok
+test_blocked_budget_is_not_redistributed (test_market_rules.MarketRuleTests.test_blocked_budget_is_not_redistributed) ... ok
+test_daily_target_cannot_sell_shares_bought_same_day (test_market_rules.MarketRuleTests.test_daily_target_cannot_sell_shares_bought_same_day) ... ok
+test_future_high_low_cannot_change_open_execution (test_market_rules.MarketRuleTests.test_future_high_low_cannot_change_open_execution) ... ok
+test_limit_down_buy_skips_without_delay (test_market_rules.MarketRuleTests.test_limit_down_buy_skips_without_delay) ... ok
+test_limit_up_sell_skips_without_delay (test_market_rules.MarketRuleTests.test_limit_up_sell_skips_without_delay) ... ok
+test_new_signal_cancels_old_suspended_target (test_market_rules.MarketRuleTests.test_new_signal_cancels_old_suspended_target) ... ok
+test_prefix_rates_and_boundary (test_market_rules.MarketRuleTests.test_prefix_rates_and_boundary) ... ok
+test_raw_price_is_used_for_limit_and_fill (test_market_rules.MarketRuleTests.test_raw_price_is_used_for_limit_and_fill) ... ok
+test_spec_direction_is_not_reversed (test_market_rules.MarketRuleTests.test_spec_direction_is_not_reversed) ... ok
+test_stamp_tax_switches_on_exact_date (test_market_rules.MarketRuleTests.test_stamp_tax_switches_on_exact_date) ... ok
+test_suspension_defers_and_preserves_signal_date (test_market_rules.MarketRuleTests.test_suspension_defers_and_preserves_signal_date) ... ok
+test_suspension_retry_at_limit_is_cancelled (test_market_rules.MarketRuleTests.test_suspension_retry_at_limit_is_cancelled) ... ok
+test_tax_uses_actual_sell_date_and_only_sell (test_market_rules.MarketRuleTests.test_tax_uses_actual_sell_date_and_only_sell) ... ok
+test_factor_level_does_not_change_returns (test_signal_health.SignalHealthTests.test_factor_level_does_not_change_returns) ... ok
+test_flat_returns_fail_cost_gate_without_engine (test_signal_health.SignalHealthTests.test_flat_returns_fail_cost_gate_without_engine) ... ok
+test_forward_returns_start_at_next_open (test_signal_health.SignalHealthTests.test_forward_returns_start_at_next_open) ... ok
+test_limit_skip_is_cash_without_budget_redistribution (test_signal_health.SignalHealthTests.test_limit_skip_is_cash_without_budget_redistribution) ... ok
+test_newey_west_accounts_for_overlapping_persistent_values (test_signal_health.SignalHealthTests.test_newey_west_accounts_for_overlapping_persistent_values) ... ok
+test_no_fill_across_missing_price (test_signal_health.SignalHealthTests.test_no_fill_across_missing_price) ... ok
+test_no_future_data_in_pool_or_ranking_or_regime (test_signal_health.SignalHealthTests.test_no_future_data_in_pool_or_ranking_or_regime) ... ok
+test_paired_comparison_uses_identical_signal_dates (test_signal_health.SignalHealthTests.test_paired_comparison_uses_identical_signal_dates) ... ok
+test_positive_amount_and_minimum_age (test_signal_health.SignalHealthTests.test_positive_amount_and_minimum_age) ... ok
+test_regime_has_full_specified_warmup (test_signal_health.SignalHealthTests.test_regime_has_full_specified_warmup) ... ok
+test_rsi_seed_and_gap_reset (test_signal_health.SignalHealthTests.test_rsi_seed_and_gap_reset) ... ok
+test_sample_end_is_explicitly_censored (test_signal_health.SignalHealthTests.test_sample_end_is_explicitly_censored) ... ok
+test_unknown_exit_is_not_zero (test_signal_health.SignalHealthTests.test_unknown_exit_is_not_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 84 tests in 6.531s
+
+OK

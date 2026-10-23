@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": 885,
+  "scope": "原始端点→逐目标→逐日→年度/全期/配对→闸门",
+  "outputs": {
+    "annual.csv": "df28ec0487b347b93e3b38644d0c5aaa8bdb350bea1e763a0c9ba0eca83518ae",
+    "annual_regime.csv": "26d9ab2d9e60445331364d49992a9f4ba5273f445dc6249f5e9a09c2b6319d1a",
+    "availability.csv": "e466dc14b394e22a3fe665963b2a14aad15a75873a2568389340f73cf975c39a",
+    "daily.csv": "124b3ac7d40fe712495ec2955d088b663305852ec998492a92b30d93f4d964c6",
+    "gate.json": "911e22a12945b7d36e9b4cadc8b07552a25f14c11bd7adda383e0dfbfeb0f93a",
+    "manifest.json": "71a34d8f301bdbfbd76d945cf7fdaa01a116db1dd37f423499fd66ea6f8b9de2",
+    "market_proxy.csv": "970d010a4d808f1f00652797e507b1f00dfbfe397ab4ed67fd2000b1b2e00184",
+    "paired.csv": "8936284c3533c64bff7c6732640e2a758f81cfd23973ff0b3afad8f9a7b250f1",
+    "pool_members.feather": "4dc87f143bc21b387b0f8f53f56dceb91efc97f71a23584ae029f42786a4f799",
+    "sensitivity.csv": "e5dd30186b2c0034df112cbc12fe41568161b0f2b762e6d675af82b48bd5206f",
+    "signal_observations.feather": "fa746b1dca21d1d9d1790a08e69c15ab88ca58abe30da72840c82c3565e36cf8",
+    "summary.csv": "db4b5cc548e9509d86628e151f9ab6ea59a47378ea04e395dc7e0b8e20c5f9da",
+    "summary_regime.csv": "e445e3722d4b25a0e8305314748f48900ae30c7c4f79eafdb456fab975e667f6"
+  }
+}

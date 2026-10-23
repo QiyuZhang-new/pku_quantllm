@@ -1,0 +1,10 @@
+{
+  "method": "lowvol60",
+  "k": 100,
+  "holding": 20,
+  "min_listed": 120,
+  "min_adv": 200000000.0,
+  "volatility_window": 60,
+  "momentum_window": 120,
+  "momentum_skip": 20
+}

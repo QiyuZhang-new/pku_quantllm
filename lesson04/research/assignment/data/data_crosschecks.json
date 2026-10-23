@@ -1,0 +1,54 @@
+{
+  "amount_unit_sample": {
+    "date": "2025-01-02",
+    "symbol": "600000.SH",
+    "local_amt": 803904040.23,
+    "baostock_amount": 803904040.23,
+    "unit": "人民币元",
+    "matches": true
+  },
+  "st_announcement_crosschecks": [
+    {
+      "symbol": "001270.SZ",
+      "date": "2025-04-23",
+      "is_st": 0,
+      "trade_status": 0,
+      "expected_st": 0,
+      "expected_trade_status": 0,
+      "matches": true
+    },
+    {
+      "symbol": "001270.SZ",
+      "date": "2025-04-24",
+      "is_st": 1,
+      "trade_status": 1,
+      "expected_st": 1,
+      "expected_trade_status": 1,
+      "matches": true
+    },
+    {
+      "symbol": "001270.SZ",
+      "date": "2026-05-19",
+      "is_st": 1,
+      "trade_status": 0,
+      "expected_st": 1,
+      "expected_trade_status": 0,
+      "matches": true
+    },
+    {
+      "symbol": "001270.SZ",
+      "date": "2026-05-20",
+      "is_st": 0,
+      "trade_status": 1,
+      "expected_st": 0,
+      "expected_trade_status": 1,
+      "matches": true
+    }
+  ],
+  "announcement_sources": [
+    "https://disc.static.szse.cn/download/disc/disk03/finalpage/2025-04-23/1fc0c56b-fbc2-43c1-bd4c-aca59b26b088.PDF",
+    "https://disc.static.szse.cn/disc/disk03/finalpage/2026-05-19/7dcd926a-5a98-4b8b-b5cb-185bc679a713.PDF"
+  ],
+  "source_sha256": "9eded41e916434ce7737dc4ef4cffb013233001665d7dbbf4e5dc45f408f7290",
+  "passed": true
+}

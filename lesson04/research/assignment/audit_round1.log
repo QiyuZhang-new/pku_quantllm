@@ -1,0 +1,8 @@
+audited selected checks 37418 failures 0
+audited slip_0 checks 74848 failures 0
+audited slip_15bp checks 112251 failures 0
+audited equal_weight_liquid checks 4870333 failures 0
+audited train_lowvol60 checks 4914321 failures 0
+audited train_momentum120 checks 4989046 failures 0
+audited train_lowvol_momentum checks 5037300 failures 0
+{"checks": 5042734, "passed": true, "failures": [], "failure_count": 0, "audit_source_sha256": "594541e373bfcc603389a2d81552184b3eed1900a82d0a43a23bb93a05e9a057"}

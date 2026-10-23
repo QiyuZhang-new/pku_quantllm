@@ -1,0 +1,57 @@
+{
+  "checks": 7966285,
+  "passed": true,
+  "failures": [],
+  "failure_count": 0,
+  "experiments": [
+    {
+      "experiment": "train_deviation20",
+      "trades": 26840,
+      "end_positions": 4,
+      "max_trade_over_prior_adv": 0.049999991943634726,
+      "reconstructed_final_cash": 1201657723.5197036,
+      "reconstructed_final_equity": 1213418676.5197036
+    },
+    {
+      "experiment": "selected",
+      "trades": 8871,
+      "end_positions": 0,
+      "max_trade_over_prior_adv": 0.04999999909744694,
+      "reconstructed_final_cash": 1190981929.135581,
+      "reconstructed_final_equity": 1190981929.135581
+    },
+    {
+      "experiment": "slip_0",
+      "trades": 8880,
+      "end_positions": 0,
+      "max_trade_over_prior_adv": 0.04999999909744694,
+      "reconstructed_final_cash": 1209722599.9275966,
+      "reconstructed_final_equity": 1209722599.9275966
+    },
+    {
+      "experiment": "slip_15bp",
+      "trades": 8835,
+      "end_positions": 0,
+      "max_trade_over_prior_adv": 0.04999999707033744,
+      "reconstructed_final_cash": 1154030992.4890528,
+      "reconstructed_final_equity": 1154030992.4890528
+    },
+    {
+      "experiment": "window60",
+      "trades": 12134,
+      "end_positions": 0,
+      "max_trade_over_prior_adv": 0.04999999319251226,
+      "reconstructed_final_cash": 1160212099.6172976,
+      "reconstructed_final_equity": 1160212099.6172976
+    },
+    {
+      "experiment": "equal_weight_liquid",
+      "trades": 624197,
+      "end_positions": 15,
+      "max_trade_over_prior_adv": 0.01396328353025729,
+      "reconstructed_final_cash": 1270366808.8078678,
+      "reconstructed_final_equity": 1275517638.1727073
+    }
+  ],
+  "audit_source_sha256": "3f6c1ed81fadc6596bc5ac61354d4645e3eb6ad8fb0abf9631664d4516848c70"
+}

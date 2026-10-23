@@ -1,0 +1,11 @@
+{
+  "fetched_at_utc": "2026-10-16T15:15:45.436180+00:00",
+  "provider": "BaoStock",
+  "api": "query_history_k_data_plus",
+  "fields": "date,code,isST,tradestatus,preclose",
+  "start": "2022-01-01",
+  "end": "2026-09-30",
+  "symbols": 5451,
+  "failed": 0,
+  "empty": 38
+}

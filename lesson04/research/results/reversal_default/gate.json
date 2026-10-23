@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "failures": [
+    "默认成本下 5 日平均净超额不大于 0"
+  ],
+  "primary_signal": "reversal",
+  "primary_variant": "buyable_cash",
+  "horizon": 5,
+  "one_way_cost": 0.0015,
+  "limit_down_ratio": 0.0014845230574857865,
+  "positive_gross_years": 4,
+  "primary_net_excess": -0.0030603542365046535,
+  "stage2_benchmark_gate": "阶段 1 通过后才检验，阶段 1 不能宣称已通过净值基准判据"
+}

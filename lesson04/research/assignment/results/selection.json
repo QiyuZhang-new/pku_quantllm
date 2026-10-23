@@ -1,0 +1,11 @@
+{
+  "chosen": "lowvol60",
+  "criterion": "2023-2024净Sharpe最高，平分按候选顺序",
+  "candidates": [
+    "lowvol60",
+    "momentum120",
+    "lowvol_momentum"
+  ],
+  "chosen_at_utc": "2026-10-16T15:17:15.077905+00:00",
+  "assignment_window_used_to_select": false
+}

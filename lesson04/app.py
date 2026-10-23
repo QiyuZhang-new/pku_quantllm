@@ -31,6 +31,9 @@ LABELS = {
     "stale": "缺少有效收盘价", "target_weight": "目标权重", "reason": "未成交原因",
     "equity": "账户权益", "cash": "现金", "return": "日收益率", "turnover": "双边换手率",
     "fees": "费用", "positions": "持仓数量", "stale_positions": "缺价持仓数",
+    "sell_tax_rate": "卖出印花税率", "deferred": "因停牌顺延",
+    "attempted_orders": "订单尝试数", "limit_rejected_orders": "涨跌停阻止数",
+    "suspended_orders": "停牌受阻尝试数", "deferred_fills": "顺延成交数",
 }
 
 
@@ -68,6 +71,7 @@ def sidebar(info):
         strategy = st.selectbox("策略", list(STRATEGIES), key="strategy")
         st.caption(STRATEGIES[strategy].description)
         universe = st.radio("股票池", ["自选证券", "全部证券"], horizontal=True, key="universe")
+        historical_tax = st.checkbox("按成交日使用历史印花税", value=True, key="historical_tax")
         if universe == "全部证券":
             st.caption("全市场回测可能使用 1–2 GB 内存，长期持仓记录会增加开销。")
         dates, symbols = info["dates"], info["symbols"]
@@ -88,7 +92,8 @@ def sidebar(info):
             lot_mode = st.selectbox("份额约束", ["每手 100 份", "允许零碎份额"], key="lot_mode")
             commission = st.number_input("双向佣金（基点）", min_value=0.0, max_value=1000.0, value=3.0, step=0.5, key="commission_bps")
             slippage = st.number_input("单边滑点（基点）", min_value=0.0, max_value=1000.0, value=5.0, step=0.5, key="slippage_bps")
-            sell_tax = st.number_input("卖出税（基点）", min_value=0.0, max_value=1000.0, value=0.0, step=0.5, key="sell_tax_bps")
+            sell_tax = st.number_input("固定卖出税（基点）", min_value=0.0, max_value=1000.0, value=0.0, step=0.5, key="sell_tax_bps", disabled=historical_tax)
+            st.caption("历史印花税：2023-08-28 前卖出 10 基点，此后 5 基点。")
             st.caption("1 基点 = 0.01%。费用按实际成交金额计算。")
             submitted = st.form_submit_button("运行回测", type="primary", width="stretch", key="run_backtest")
 
@@ -104,7 +109,7 @@ def sidebar(info):
                 return
             config = BacktestConfig(
                 initial_cash=initial_cash, commission=commission / 10000,
-                slippage=slippage / 10000, sell_tax=sell_tax / 10000,
+                slippage=slippage / 10000, sell_tax=None if historical_tax else sell_tax / 10000,
                 lot_size=100 if lot_mode == "每手 100 份" else 0,
                 start=interval[0].isoformat(), end=interval[1].isoformat(),
             )
@@ -165,7 +170,11 @@ def table(frame, filename):
     if "side" in display:
         display["side"] = display["side"].replace({"buy": "买入", "sell": "卖出"})
     if "reason" in display:
-        display["reason"] = display["reason"].replace({"invalid_open": "开盘价无效", "missing_adjustment_factor": "复权因子缺失"})
+        display["reason"] = display["reason"].replace({
+            "invalid_open": "开盘价无效", "missing_adjustment_factor": "复权因子缺失",
+            "missing_previous_close": "前一日收盘价缺失", "limit_down_buy": "跌停不买",
+            "limit_up_sell": "涨停不卖",
+        })
     st.dataframe(display.rename(columns=LABELS), hide_index=True, width="stretch", height=360)
     st.download_button("下载当前表格 CSV", frame.to_csv(index=False).encode("utf-8-sig"), file_name=filename, mime="text/csv", key=f"csv_{filename}", on_click="ignore")
 
@@ -223,6 +232,8 @@ def render_result(run):
     columns[1].metric("平均仓位", f"{metrics['average_exposure']:.1%}")
     columns[2].metric("交易费用（元）", f"{metrics['total_fees']:,.2f}")
     columns[3].metric("滑点成本（元）", f"{metrics['total_slippage_cost']:,.2f}")
+    if "limit_rejected_ratio" in metrics:
+        st.caption(f"涨跌停阻止比例 {metrics['limit_rejected_ratio']:.2%}（按订单尝试计） · 停牌顺延目标比例 {metrics.get('suspended_unique_ratio', 0):.2%}（按信号日与证券去重）")
 
     if metrics["stale_position_days"]:
         st.info(f"本次实验累计有 {metrics['stale_position_days']:,} 个缺价持仓日；可在持仓明细查看估值标记。")
@@ -236,9 +247,9 @@ def render_result(run):
     with tabs[2]:
         position_details(run)
     with tabs[3]:
-        st.caption("记录因开盘价或复权因子无效而跳过的目标；整手取整为零的订单不计入。")
+        st.caption("记录涨跌停、开盘价、前收或复权因子无效的目标；deferred 标记停牌顺延，整手取整为零不计入。")
         if result.rejected_orders.empty:
-            st.info("没有因开盘价或复权因子无效而跳过的目标。")
+            st.info("没有被门禁阻止或顺延的目标。")
         else:
             table(result.rejected_orders, "rejected_orders.csv")
     with tabs[4]:
@@ -298,7 +309,7 @@ def main():
             except (OSError, ValueError, KeyError, TypeError) as exc:
                 st.error(f"读取实验失败：{exc}")
     with st.expander("回测口径"):
-        st.write("只做多、无杠杆；按累计复权因子模拟总收益持仓。有效开盘价按配置的费用与滑点成交，当前未模拟涨跌停、盘口排队或成交量限制。")
+        st.write("只做多、无杠杆；按累计复权因子模拟总收益持仓。按规格限制跌停买入和涨停卖出：300/301/688 前缀近似 20%，其余 10%；无 ST 标记。停牌顺延，涨跌停跳过不顺延；未模拟盘口排队或成交量限制。")
         st.caption("年化按 252 个交易日计算，短区间年化值仅作同口径统计。缺价时沿用已知价格估值，并记录标记。")
 
 if __name__ == "__main__":

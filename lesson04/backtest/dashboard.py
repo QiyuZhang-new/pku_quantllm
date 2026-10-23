@@ -114,7 +114,8 @@ def load_experiment(directory):
     positions = pd.read_csv(directory / "positions.csv", parse_dates=["date"])
     rejected = pd.read_csv(directory / "rejected_orders.csv", parse_dates=["date", "signal_date"])
     # 重新计算使较早的 CLI 结果也可显示新增指标，例如平均仓位。
-    metrics = performance(equity, config.initial_cash, config.annual_days)
+    metrics = json.loads((directory / "metrics.json").read_text(encoding="utf-8"))
+    metrics.update(performance(equity, config.initial_cash, config.annual_days))
     result = BacktestResult(equity, trades, positions, rejected, metrics, config)
     metadata = directory / "experiment.json"
     experiment = json.loads(metadata.read_text(encoding="utf-8")) if metadata.exists() else {}

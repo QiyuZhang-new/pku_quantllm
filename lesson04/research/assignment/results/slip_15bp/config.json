@@ -1,0 +1,20 @@
+{
+  "initial_cash": 1000000000.0,
+  "commission": 0.0001,
+  "sell_tax": 0.0005,
+  "slippage": 0.0015,
+  "lot_size": 100,
+  "annual_days": 252,
+  "start": "2025-01-02",
+  "end": "2026-09-30",
+  "apply_price_limits": true,
+  "defer_suspended_orders": true,
+  "execution_policy": "standard",
+  "prestart_signal": true,
+  "liquidate_on_last_day": true,
+  "max_participation": 0.05,
+  "volume_lookback": 20,
+  "record_positions": true,
+  "exit_st_on_open": true,
+  "board_lots": true
+}

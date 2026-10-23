@@ -1,0 +1,7 @@
+audited train_deviation20 checks 311378 failures 0
+audited selected checks 415676 failures 0
+audited slip_0 checks 520071 failures 0
+audited slip_15bp checks 623968 failures 0
+audited window60 checks 766221 failures 0
+audited equal_weight_liquid checks 7960855 failures 0
+{"checks": 7966285, "passed": true, "failures": [], "failure_count": 0, "audit_source_sha256": "3f6c1ed81fadc6596bc5ac61354d4645e3eb6ad8fb0abf9631664d4516848c70"}

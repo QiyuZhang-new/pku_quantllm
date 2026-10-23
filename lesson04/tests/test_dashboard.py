@@ -154,6 +154,17 @@ class ApplicationTests(DashboardFixture):
         self.assertTrue(any("至少选择" in error.value for error in app.error))
         self.assertFalse(self.runs_dir.exists())
 
+    def test_historical_tax_default_and_explicit_fixed_override(self):
+        app = self.application()
+        app.button("run_backtest").click().run()
+        self.assert_no_page_exception(app)
+        self.assertIsNone(app.session_state["active_run"].result.config.sell_tax)
+        app.checkbox("historical_tax").uncheck().run()
+        app.number_input("sell_tax_bps").set_value(10.0)
+        app.button("run_backtest").click().run()
+        self.assert_no_page_exception(app)
+        self.assertEqual(app.session_state["active_run"].result.config.sell_tax, .001)
+
     def test_all_symbols_mode_passes_complete_universe(self):
         app = self.application()
         app.radio("universe").set_value("全部证券").run()
