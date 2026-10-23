@@ -1,0 +1,16 @@
+[project]
+name = "quantllm-lesson05"
+version = "0.1.0"
+description = "基于未来五日收益率的横截面因子评价与证据报告"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pandas>=2.2", "pyarrow>=15", "matplotlib>=3.8"]
+
+[project.scripts]
+factor-eval = "factor_eval.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["factor_eval*"]

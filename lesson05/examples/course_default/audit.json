@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "sampled_dates": 15,
+  "checked": [
+    "oriented_rank_ic",
+    "all_groups",
+    "benchmark_and_round_trip_cost",
+    "code_hashes"
+  ],
+  "samples": [
+    {
+      "date": "2020-07-03",
+      "split": "train",
+      "rank_ic": 0.10692624630415747
+    },
+    {
+      "date": "2021-03-19",
+      "split": "train",
+      "rank_ic": 0.05254149420570591
+    },
+    {
+      "date": "2021-12-06",
+      "split": "train",
+      "rank_ic": 0.10271021425656585
+    },
+    {
+      "date": "2022-08-23",
+      "split": "train",
+      "rank_ic": 0.051371733844572304
+    },
+    {
+      "date": "2023-05-16",
+      "split": "train",
+      "rank_ic": -7.941610419393016e-05
+    },
+    {
+      "date": "2023-05-25",
+      "split": "validation",
+      "rank_ic": 0.3981475647304441
+    },
+    {
+      "date": "2023-10-25",
+      "split": "validation",
+      "rank_ic": 0.10761909765646523
+    },
+    {
+      "date": "2024-03-25",
+      "split": "validation",
+      "rank_ic": 0.11125380972245781
+    },
+    {
+      "date": "2024-08-21",
+      "split": "validation",
+      "rank_ic": -0.05556007872716605
+    },
+    {
+      "date": "2025-01-21",
+      "split": "validation",
+      "rank_ic": 0.12578628929594785
+    },
+    {
+      "date": "2025-02-07",
+      "split": "test",
+      "rank_ic": -0.06848101892879999
+    },
+    {
+      "date": "2025-07-07",
+      "split": "test",
+      "rank_ic": 0.06771283293513061
+    },
+    {
+      "date": "2025-12-03",
+      "split": "test",
+      "rank_ic": 0.012341063043008207
+    },
+    {
+      "date": "2026-05-11",
+      "split": "test",
+      "rank_ic": -0.14054179955268215
+    },
+    {
+      "date": "2026-10-08",
+      "split": "test",
+      "rank_ic": -0.27408206710496125
+    }
+  ]
+}

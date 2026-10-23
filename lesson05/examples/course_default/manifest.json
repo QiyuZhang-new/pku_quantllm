@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-10-23T12:03:36.917566+00:00",
+  "synthetic": false,
+  "candidate_order": [
+    "5dr",
+    "momentum20",
+    "volatility20"
+  ],
+  "inputs_sha256": {
+    "/home/zqy/Personal-Growth/database/course/course-homework/QuantLLM/lesson04/feathers/open.feather": "a75e7aa3dac9e101f2c3cfff85728b26a29ea50ccc6ec46c315a36e8476d5f92",
+    "/home/zqy/Personal-Growth/database/course/course-homework/QuantLLM/lesson04/feathers/close.feather": "621b7b381f96c7d162317ac67c8831aebfc5e78f4b1ecd59159fc93e0ea109e7",
+    "/home/zqy/Personal-Growth/database/course/course-homework/QuantLLM/lesson04/feathers/cumadj.feather": "5ebc13623115743c39b2cb56dbe365f10c4c72d6fed6ac4041d9377895439173",
+    "/home/zqy/Personal-Growth/database/course/course-homework/QuantLLM/lesson04/feathers/amt.feather": "cd2a2f43e273963f93230163813aafaddb52307d1805ee1a583aeab931e418c2"
+  },
+  "code_sha256": {
+    "__init__.py": "954825e535b15be9abbe62d5f2cf9b23070a4c8fe3c33a40766e56f36d7eb87e",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "cli.py": "79849818004be72b394252beb7e69ec08440b4530341d725c2e4494a888feec5",
+    "core.py": "7766406495dd99f17b14b4d8392bc88166c33f2b59addde7f7f1eeb8d0ba0abb",
+    "data.py": "960fc8c617a59e66d9fae57c3f854e972b7407d59b3137da637836699ba02ee4",
+    "report.py": "8ee8ce0f0da3922a1bb2e0f900888b5e225ea34079672bbccd257dab918ad2c1",
+    "stats.py": "e6896e8031bf5b7c1fee757c5fc81bfc3c3fc70b47bce5dd40751a4f81d3f135"
+  },
+  "python": "3.12.3",
+  "numpy": "2.5.4",
+  "pandas": "3.0.6",
+  "date_start": "2020-01-02",
+  "date_end": "2026-10-16",
+  "symbols": 5451,
+  "config": {
+    "horizon": 5,
+    "groups": 5,
+    "min_pairs": 100,
+    "min_history": 120,
+    "min_adv": 100000000.0,
+    "top_n": 1000,
+    "train_end": null,
+    "valid_end": null,
+    "min_days": 126,
+    "min_factor_coverage": 0.8,
+    "min_label_coverage": 0.98,
+    "min_valid_ratio": 0.8,
+    "min_rank_ic": 0.02,
+    "min_hac_t": 2.0,
+    "max_fdr": 0.05,
+    "min_monotonicity": 0.6,
+    "min_month_positive": 0.55,
+    "min_offset_positive": 0.6,
+    "one_way_bps": 10.0,
+    "hac_lags": 10
+  },
+  "boundaries": {
+    "train_end": "2023-05-24",
+    "valid_end": "2025-02-06",
+    "purged_rows": 18
+  },
+  "command": [
+    "/home/zqy/Personal-Growth/database/course/course-homework/QuantLLM/lesson05/factor_eval/__main__.py",
+    "--output",
+    "examples/course_default"
+  ]
+}

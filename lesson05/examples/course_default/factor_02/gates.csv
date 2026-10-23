@@ -1,0 +1,28 @@
+category,period,metric,actual,threshold,passed,explanation
+data,train,direction_days,696.0,126,True,训练期有效日期不足时，方向不可依赖
+data,validation,valid_days,405.0,126,True,至少半个交易年的有效 IC
+data,validation,factor_coverage,1.0,0.8,True,信号时点股票池内的因子覆盖
+data,validation,label_coverage,1.0,0.98,True,未来标签缺失会造成选择偏差
+data,validation,ic_valid_ratio,1.0,0.8,True,常数或退化横截面不提供排序证据
+data,validation,portfolio_valid_ratio,1.0,0.8,True,组合缺失收益不得重新分配权重
+prediction,validation,rank_ic,0.08304349539651044,0.02,True,方向冻结后的预测强度
+prediction,validation,hac_t,5.3689960373536945,2.0,True,考虑五日重叠的 HAC 显著性
+prediction,validation,fdr_q,2.3752847687851074e-07,0.05,True,本次批量候选的 BH 校正
+returns,validation,long_excess_net,0.0012162350938533992,>0,True,每期完整往返成本；多头须战胜同池未扣费等权基准，多空须有正价差
+returns,validation,long_short_net,0.006157080019289855,>0,True,每期完整往返成本；多头须战胜同池未扣费等权基准，多空须有正价差
+stability,validation,monotonicity,0.9999999999999999,0.6,True,分层、跨月与五个固定非重叠起点的方向一致性
+stability,validation,positive_month_ratio,0.95,0.55,True,分层、跨月与五个固定非重叠起点的方向一致性
+stability,validation,positive_offset_ratio,1.0,0.6,True,分层、跨月与五个固定非重叠起点的方向一致性
+data,test,valid_days,405.0,126,True,至少半个交易年的有效 IC
+data,test,factor_coverage,1.0,0.8,True,信号时点股票池内的因子覆盖
+data,test,label_coverage,0.9999975308641976,0.98,True,未来标签缺失会造成选择偏差
+data,test,ic_valid_ratio,1.0,0.8,True,常数或退化横截面不提供排序证据
+data,test,portfolio_valid_ratio,0.9975308641975309,0.8,True,组合缺失收益不得重新分配权重
+prediction,test,rank_ic,0.07406717309965284,0.02,True,方向冻结后的预测强度
+prediction,test,hac_t,3.7841005842692934,2.0,True,考虑五日重叠的 HAC 显著性
+prediction,test,fdr_q,0.0004627962911137333,0.05,True,本次批量候选的 BH 校正
+returns,test,long_excess_net,-0.0012300367701230009,>0,False,每期完整往返成本；多头须战胜同池未扣费等权基准，多空须有正价差
+returns,test,long_short_net,-0.0008053793153733055,>0,False,每期完整往返成本；多头须战胜同池未扣费等权基准，多空须有正价差
+stability,test,monotonicity,0.7,0.6,True,分层、跨月与五个固定非重叠起点的方向一致性
+stability,test,positive_month_ratio,0.8,0.55,True,分层、跨月与五个固定非重叠起点的方向一致性
+stability,test,positive_offset_ratio,0.2,0.6,False,分层、跨月与五个固定非重叠起点的方向一致性

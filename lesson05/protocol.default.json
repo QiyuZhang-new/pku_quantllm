@@ -1,0 +1,22 @@
+{
+  "horizon": 5,
+  "groups": 5,
+  "min_pairs": 100,
+  "min_history": 120,
+  "min_adv": 100000000.0,
+  "top_n": 1000,
+  "train_end": null,
+  "valid_end": null,
+  "min_days": 126,
+  "min_factor_coverage": 0.8,
+  "min_label_coverage": 0.98,
+  "min_valid_ratio": 0.8,
+  "min_rank_ic": 0.02,
+  "min_hac_t": 2.0,
+  "max_fdr": 0.05,
+  "min_monotonicity": 0.6,
+  "min_month_positive": 0.55,
+  "min_offset_positive": 0.6,
+  "one_way_bps": 10.0,
+  "hac_lags": 10
+}
