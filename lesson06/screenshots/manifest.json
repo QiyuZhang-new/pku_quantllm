@@ -1,0 +1,20 @@
+{
+  "url": "http://127.0.0.1:8501",
+  "captured": "2026-11-06T07:06:51.882Z",
+  "campaign": "formula_20261106_v1_adaptive_gp",
+  "attempt": 8,
+  "window": "fold_02",
+  "errors": [],
+  "files": [
+    "01-evolution-overview.png",
+    "02-feedback-learning.png",
+    "03-candidate-account.png",
+    "04-original-backtest.png"
+  ],
+  "sha256": {
+    "01-evolution-overview.png": "209c7f11b3ca7452a236c414733f9e4555933fd447aebcb468b5357637ade636",
+    "02-feedback-learning.png": "c3a325441bf019815d477fb9ed23a69eed6363c31653402d33e37d24db19b928",
+    "03-candidate-account.png": "4454aefc6eec458b063aaf18de84f23d921409238b0c38c845b50fa8e0ccd031",
+    "04-original-backtest.png": "f8d5873ba5093b3d1f6d9a7171499c23ccbcce09aba6ea5196af8ede004f1ab9"
+  }
+}

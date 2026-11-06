@@ -1,0 +1,119 @@
+{
+  "arms": [
+    {
+      "method": "adaptive_gp",
+      "campaign": "formula_20261106_v1_adaptive_gp",
+      "attempts": 16,
+      "development_passed": 0,
+      "children_improved_parent": 2,
+      "best": {
+        "method": "adaptive_gp",
+        "round": 4,
+        "attempt_id": 8,
+        "fitness": 0.02244339933141313,
+        "development_passed": false
+      },
+      "best_spec": {
+        "expression": {
+          "arg": {
+            "op": "volatility",
+            "window": 20
+          },
+          "op": "smooth",
+          "window": 10
+        },
+        "hypothesis": "公式树smooth变异；父候选#4；开发诊断：预测排序未稳定转化为扣费后的组合增益。检验跨开发窗口账户收益是否改善；结果须重新经过全部准入。",
+        "name": "gp_r2_4_smooth",
+        "parent_id": "f31e0e4004dc265b2acd289bfb9651108906e3658369949b4936295c0d04fc19"
+      },
+      "history": [
+        {
+          "method": "adaptive_gp",
+          "round": 1,
+          "attempt_id": 2,
+          "fitness": -0.09866307752631433,
+          "development_passed": false
+        },
+        {
+          "method": "adaptive_gp",
+          "round": 2,
+          "attempt_id": 8,
+          "fitness": 0.02244339933141313,
+          "development_passed": false
+        },
+        {
+          "method": "adaptive_gp",
+          "round": 3,
+          "attempt_id": 8,
+          "fitness": 0.02244339933141313,
+          "development_passed": false
+        },
+        {
+          "method": "adaptive_gp",
+          "round": 4,
+          "attempt_id": 8,
+          "fitness": 0.02244339933141313,
+          "development_passed": false
+        }
+      ],
+      "online_llm_calls": 0,
+      "holdout_opened": false
+    },
+    {
+      "method": "random_gp",
+      "campaign": "formula_20261106_v1_random_gp",
+      "attempts": 16,
+      "development_passed": 0,
+      "children_improved_parent": 8,
+      "best": {
+        "method": "random_gp",
+        "round": 4,
+        "attempt_id": 16,
+        "fitness": 0.008867447470706103,
+        "development_passed": false
+      },
+      "best_spec": {
+        "expression": {
+          "op": "volatility",
+          "window": 10
+        },
+        "hypothesis": "公式树window变异；父候选#4；开发诊断：预测排序未稳定转化为扣费后的组合增益。检验跨开发窗口账户收益是否改善；结果须重新经过全部准入。",
+        "name": "gp_r4_4_window",
+        "parent_id": "f31e0e4004dc265b2acd289bfb9651108906e3658369949b4936295c0d04fc19"
+      },
+      "history": [
+        {
+          "method": "random_gp",
+          "round": 1,
+          "attempt_id": 2,
+          "fitness": -0.09866307752631433,
+          "development_passed": false
+        },
+        {
+          "method": "random_gp",
+          "round": 2,
+          "attempt_id": 2,
+          "fitness": -0.09866307752631433,
+          "development_passed": false
+        },
+        {
+          "method": "random_gp",
+          "round": 3,
+          "attempt_id": 2,
+          "fitness": -0.09866307752631433,
+          "development_passed": false
+        },
+        {
+          "method": "random_gp",
+          "round": 4,
+          "attempt_id": 16,
+          "fitness": 0.008867447470706103,
+          "development_passed": false
+        }
+      ],
+      "online_llm_calls": 0,
+      "holdout_opened": false
+    }
+  ],
+  "interpretation": "一次固定种子的开发期机制实例；不能据此证明自适应方法更优或因子独立有效"
+}

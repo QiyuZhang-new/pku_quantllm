@@ -5,11 +5,17 @@ from datetime import date
 import logging
 import os
 from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 import altair as alt
 import pandas as pd
 import pyarrow as pa
 import streamlit as st
+from research_ui.branding import NAME, CHINESE_NAME, DISPLAY_NAME, TAGLINE
 
 from backtest import BacktestConfig
 from backtest.dashboard import (
@@ -215,6 +221,9 @@ def position_details(run):
 
 def render_result(run):
     result, metrics = run.result, run.result.metrics
+    if run.experiment.get("research_source"):
+        source = run.experiment["research_source"]
+        st.info(f"因子研究结果 · {source['campaign']} · {source['window']} · {source['decision']}。仅供研究比较。")
     strategy = run.experiment.get("strategy", "历史实验")
     if strategy == "EqualWeightStrategy":
         strategy = "等权示例"
@@ -272,8 +281,25 @@ def render_result(run):
             st.download_button("下载实验 ZIP", st.session_state["download_archive"], file_name=f"{run.directory.name}.zip", mime="application/zip", type="primary", width="stretch", key="download_archive_button", on_click="ignore")
 
 
-def main():
-    st.set_page_config(page_title="QuantLLM · 回测工作台", page_icon="📈", layout="wide")
+def main(default_section="策略回测"):
+    st.set_page_config(page_title=DISPLAY_NAME, page_icon="🧬", layout="wide")
+    st.sidebar.markdown(f"## {NAME}")
+    st.sidebar.caption(f"{CHINESE_NAME} · {TAGLINE}")
+    sections = ["策略回测", "因子演化"]
+    requested = st.session_state.pop("platform_section_next", None)
+    if requested in sections:
+        st.session_state["platform_section"] = requested
+    elif "platform_section" not in st.session_state:
+        st.session_state["platform_section"] = default_section
+    section = st.sidebar.radio("功能模块", sections, key="platform_section")
+    if section == "因子演化":
+        from research_ui.app import render
+        status = os.environ.get("QUANTLLM_STATUS_DIR")
+        if status is None and DATA_DIR == ROOT / "feathers":
+            status = ROOT / "research/assignment/data/historical_status"
+        render(runs_dir=os.environ.get("QUANTLLM_RESEARCH_RUNS_DIR", PROJECT_ROOT / "research_runs"),
+               data_dir=DATA_DIR, status_dir=status, trading_runs=RUNS_DIR)
+        return
     st.markdown("""<style>
       .block-container {max-width: 1440px; padding-top: 2rem;}
       [data-testid="stMetric"] {background: #fff; border: 1px solid #e4eaf1;
@@ -282,8 +308,8 @@ def main():
       h1, h2, h3 {letter-spacing: -.025em;}
       [data-testid="stSidebar"] {border-right: 1px solid #e4eaf1;}
     </style>""", unsafe_allow_html=True)
-    st.title("回测工作台")
-    st.caption("QuantLLM · 日频策略研究 · 收盘信号，下一交易日开盘成交")
+    st.title(DISPLAY_NAME)
+    st.caption("策略回测 · 收盘信号，下一交易日开盘成交")
     info = None
     try:
         info = catalog(str(DATA_DIR), data_stamp(DATA_DIR))

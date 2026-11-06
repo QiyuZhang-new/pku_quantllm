@@ -1,0 +1,9 @@
+method,round,attempt_id,fitness,development_passed
+adaptive_gp,1,2,-0.09866307752631433,False
+adaptive_gp,2,8,0.02244339933141313,False
+adaptive_gp,3,8,0.02244339933141313,False
+adaptive_gp,4,8,0.02244339933141313,False
+random_gp,1,2,-0.09866307752631433,False
+random_gp,2,2,-0.09866307752631433,False
+random_gp,3,2,-0.09866307752631433,False
+random_gp,4,16,0.008867447470706103,False

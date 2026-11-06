@@ -1,0 +1,40 @@
+{
+  "folds": [
+    {
+      "train_end": "2022-12-30",
+      "valid_end": "2023-12-29"
+    },
+    {
+      "train_end": "2023-12-29",
+      "valid_end": "2024-12-31"
+    }
+  ],
+  "holdout_end": "2026-09-30",
+  "evaluation": {
+    "horizon": 5,
+    "groups": 5,
+    "min_pairs": 30,
+    "min_history": 120,
+    "min_adv": 100000000.0,
+    "top_n": 1000,
+    "one_way_bps": 10.0,
+    "hac_lags": 10
+  },
+  "execution": {
+    "initial_cash": 1000000.0,
+    "commission": 0.0001,
+    "slippage": 0.0005,
+    "sell_tax": 0.0005,
+    "lot_size": 100,
+    "max_participation": 0.05,
+    "require_status": true,
+    "max_drawdown": 0.25,
+    "min_total_return": 0.0,
+    "min_excess_return": 0.0
+  },
+  "max_rounds": 2,
+  "batch_size": 2,
+  "max_candidates": 4,
+  "max_finalists": 1,
+  "max_correlation": 0.98
+}

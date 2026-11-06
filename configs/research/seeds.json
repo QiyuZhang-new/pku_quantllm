@@ -1,0 +1,12 @@
+[
+  {
+    "name": "return20_seed",
+    "expression": {"op": "return", "window": 20},
+    "hypothesis": "较长价格变化可能包含横截面反转或延续信息，方向只由训练期确定"
+  },
+  {
+    "name": "market_deviation20_seed",
+    "expression": {"op": "market_deviation", "window": 20},
+    "hypothesis": "对当日可知市场均值的历史偏离波动可能提供不同于总波动的排序信息"
+  }
+]

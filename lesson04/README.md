@@ -1,12 +1,12 @@
 # 第四讲：日频回测系统
 
+工作台现已整合因子演化：使用原来的 `streamlit run app.py` 启动，侧栏切换
+“策略回测 / 因子演化”。演化页可将已有候选账户结果导入原回测历史，直接查看净值、
+成交和持仓，保留因子来源与准入结论。[整合说明](../docs/PLATFORM_INTEGRATION.md)。
+
 老师指定的10亿元、2025年初至2026年9月底选股研究，使用独立的
-`research/assignment/` 流程和历史逐日ST数据。最终方案与结果见
-[独立审计报告](ASSIGNMENT_AUDITED_REPORT.md)，规则见
-[后续探索协议](research/assignment/FOLLOWUP_PROTOCOL.md)。第一轮总波动选股未跑赢大盘，
-[否定报告](ASSIGNMENT_ROUND1_REPORT.md)和原始结果仍保留。
-最终流程启用正常方向涨跌停、首日使用前收盘信号建仓、最后5日分批退出且末日清仓、历史成交额容量限制。
-下文通用演示和旧反转实验的默认设置仍保留；本次结果是已接触目标区间后的探索，不代表未来保证。
+`research/assignment/` 流程和历史逐日ST数据。研究规则见
+[research/assignment/PROTOCOL.md](research/assignment/PROTOCOL.md)。该流程启用正常方向的涨跌停门禁、区间前收盘信号首日开盘建仓、末日清仓，以及历史成交额容量限制；下文通用演示和旧反转实验的默认设置仍保留。
 
 ```bash
 # 免费公开行情，无需填写账号或密钥；支持缓存续跑。
@@ -14,15 +14,14 @@ uv run python -m research.assignment.fetch_data --workers 4
 uv run python -m research.assignment.fetch_indices
 uv run python -m research.assignment.data_quality
 
-# 输出目录必须不存在，保存全部对照及敏感性结果。
-MPLCONFIGDIR=/tmp/quantllm-lesson04-matplotlib uv run python -m research.assignment.run_followup --output research/assignment/reproduction
-uv run python -m research.assignment.audit --results research/assignment/reproduction
-uv run python -m research.assignment.make_followup_report --results research/assignment/reproduction --report ASSIGNMENT_REPRODUCTION_REPORT.md
+# 输出目录必须不存在，保存训练选择及全部实验。
+MPLCONFIGDIR=/tmp/quantllm-lesson04-matplotlib uv run python -m research.assignment.run --output research/assignment/results
+uv run python -m research.assignment.audit --results research/assignment/results
+uv run python -m research.assignment.make_report --results research/assignment/results
 ```
 
-历史状态缓存由下载器重建，逐文件哈希写入实验结果。最终 `MarketDeviationStrategy` 在
-`backtest/market_deviation_strategy.py`，符合现有 `on_close` 协议；需要 `is_st` 等外部历史状态，不能直接使用没有历史ST数据的网页演示股票池。
-`FactorSelectionStrategy` 和第一轮入口 `research.assignment.run` 保留用于复现失败实验。
+历史状态缓存由下载器重建，逐文件哈希写入实验结果。`FactorSelectionStrategy` 在
+`backtest/factor_strategy.py`，符合现有 `on_close` 协议；该策略需要 `is_st` 字段，不能直接使用没有历史ST数据的网页演示股票池。
 
 本地 Feather 行情 → 策略在收盘后产生目标权重 → 下一交易日开盘撮合 → 逐日账户估值 → 绩效与成交记录。
 
@@ -136,7 +135,7 @@ result.save("runs/my_first_strategy")
 7. 当日有效收盘价优先用于估值；缺收盘价时使用当日有效开盘价，否则沿用上次有效估值，并在 `stale_positions` 和持仓 `stale` 中标记。不会用未来价格回填。长期停牌或退市后的残留持仓可能高估可变现价值，需检查这些标记。
 8. 默认按 STRATEGY.md 的方向执行“跌停不买、涨停不卖”，使用原始开盘与前收：300/301/688 前缀按 20%，其余按 10%。涨跌停跳过不补仓、不延迟，预算留现金。缺 ST 字段、历史板块制度、官方除权参考价和涨跌停取整规则，因此仅为近似。`apply_price_limits=False` 可显式关闭，仅供对照或合成测试。全天最终成交额、成交笔数、最高价和最低价不用于开盘撮合；不模拟盘口排队、成交量上限或真实证券状态，也不保证规格门禁允许的其他订单现实可成交。
 
-数据层要求各字段的日期和证券列严格一致，日期唯一且升序；保留 NaN，不前填成交价。面板历史证券覆盖尚未得到完整证明，存在幸存者和覆盖偏差风险，历史收益可能偏乐观；含有部分历史退市代码也不能据此排除偏差。策略自身的选股逻辑和外部信息也需单独检查时间戳。
+数据层要求各字段的日期和证券列严格一致，日期唯一且升序；保留 NaN，不前填成交价。已确认本面板只含当前仍在的证券，存在幸存者偏差，历史收益可能偏乐观。策略自身的选股逻辑和外部信息也需单独检查时间戳。
 
 100 万资金等权分配给数千只股票时，很多单股预算低于一手成本，会导致大量现金闲置。可缩小股票池、增加资金，或用 `--lot-size 0` 研究零碎份额模型；应同时查看 `final_cash` 和 `average_exposure`，后者为每日持仓市值占权益比例的平均值。
 
@@ -179,7 +178,3 @@ MPLCONFIGDIR=/tmp/quantllm-lesson04-matplotlib python -m unittest discover -s te
 `backtest/data.py` 管理行情和策略上下文，`strategy.py` 定义接口与等权示例，`engine.py` 负责逐日撮合和账户，`result.py` 统计并导出，`__main__.py` 提供命令行，`dashboard.py` 为网页提供实验管理。测试使用小型合成行情验证时序、费用、复权、停牌缺价、资金约束、整手、数据边界及结果保存；`tests/test_dashboard.py` 使用 Streamlit AppTest 验证表单提交、参数传递、结果图表、明细筛选、历史加载和导出。
 
 环境和课程原始要求见 [REQUIREMENTS.md](REQUIREMENTS.md)。若代理下依赖下载缓慢，使用 `UV_CONCURRENT_DOWNLOADS=2 uv sync --locked`；默认缓存不可写时添加 `--cache-dir /tmp/quantllm-lesson04-uv-cache`。
-
-## 策略补充提交的归档
-
-主实验明细可直接浏览，其他大体积对照明细见 [提交归档说明](submission/README.md)；重新审计已有完整结果前请先解压。

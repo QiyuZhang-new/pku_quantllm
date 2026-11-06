@@ -25,3 +25,9 @@
 | 晓 | 26＊＊＊＊＊＊44 | [Chuboxiao](https://github.com/Chuboxiao) |
 | 宇 | 24＊＊＊＊＊＊53 | [QiyuZhang-new](https://github.com/QiyuZhang-new) |
 
+
+## 第六讲作业：ALPHA GENESIS · 阿尔法创世
+
+[作业说明与四张实际运行界面](lesson06/README.md) · [真实行情实验报告](docs/AUTOMATIC_FACTOR_MINING.md) · [完整候选CSV](docs/experiments/formula_20261106_v1/candidates.csv)
+
+在原第四讲工作台内完成公式自动挖掘、固定评价与账户回测、反馈迭代和同预算随机对照。两组共32次候选评价、128次账户回测；本次无候选通过全部准入，在线LLM调用为0。

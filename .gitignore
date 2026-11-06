@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+research_runs/
+lesson04/runs/
+lesson04/feathers/
+lesson04/research/assignment/data/historical_status/
